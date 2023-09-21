@@ -1,7 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,30 +20,30 @@ function App() {
       </header>
     </div>
   );
-}
+}*/
 
-function navbar(){
-  return(
-<nav>
+function navbar() {
+  return (
+    <nav>
       <h1>CruzCastle Inc</h1>
       <ul>
-          <li>Precios</li>
-          <li>Acerca de nosotros</li>
-          <li>Contactanos</li>
+        <li>Precios</li>
+        <li>Acerca de nosotros</li>
+        <li>Contactanos</li>
       </ul>
-  </nav>
+    </nav>
   );
 }
 
-/*const navbar=(
+/*const navbar = (
   <nav>
-      <h1>CruzCastle Inc</h1>
-      <ul>
-          <li>Precios</li>
-          <li>Acerca de nosotros</li>
-          <li>Contactanos</li>
-      </ul>
+    <h1>CruzCastle Inc</h1>
+    <ul>
+      <li>Precios</li>
+      <li>Acerca de nosotros</li>
+      <li>Contactanos</li>
+    </ul>
   </nav>
-)*/
+);*/
 
 export default navbar;
