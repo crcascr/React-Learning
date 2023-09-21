@@ -67,10 +67,13 @@ function Mensaje() {
   return <h1>¡Hola, estoy aprendiendo React!</h1>;
 }
 
+const h1 = document.createElement("h1");
+h1.textContent = "Declaración imperativa";
+h1.className=("header");
+document.getElementById("root").append(h1);
+
 ReactDOM.render(
-  <div>
-    <Navbar />
-    <Mensaje />
-  </div>,
+  <h1 className="header">Declaración declarativa</h1>,
   document.getElementById("root")
 );
+
