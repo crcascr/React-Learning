@@ -67,13 +67,33 @@ function Mensaje() {
   return <h1>¡Hola, estoy aprendiendo React!</h1>;
 }
 
-const h1 = document.createElement("h1");
+/*const h1 = document.createElement("h1");
 h1.textContent = "Declaración imperativa";
 h1.className=("header");
 document.getElementById("root").append(h1);
+*/
+/*const page=(
+    <div>
+        <h1 className="header">Esto es JSX</h1>
+        <p>Esto es un parrafo</p>
+    </div>
+)*/
+
+const navbar=(
+    <nav>
+        <h1>CruzCastle Inc</h1>
+        <ul>
+            <li>Precios</li>
+            <li>Acerca de nosotros</li>
+            <li>Contactanos</li>
+        </ul>
+    </nav>
+)
+
+//console.log(page)
 
 ReactDOM.render(
-  <h1 className="header">Declaración declarativa</h1>,
+  navbar,
   document.getElementById("root")
-);
+)
 
