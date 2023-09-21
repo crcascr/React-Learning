@@ -3,7 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 //import App from './App';
 import reportWebVitals from "./reportWebVitals";
-import logo from "./logo192.png";
+import Header from "./Header";
+import Footer from "./Footer";
+import MainContent from "./MainContent";
 
 /*const page = (
   <div>
@@ -21,50 +23,7 @@ import logo from "./logo192.png";
 
 //document.getElementById("root").append(JSON.stringify(page))
 
-function Header() {
-  return (
-    <header>
-      <nav  className="navbar">
-        <img src={logo} alt="Logo" className="navImage" />
-        <ul className="nav-items">
-          <li>Precios</li>
-          <li>Acerca de</li>
-          <li>Contactanos</li>
-        </ul>
-      </nav>
-    </header>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="footer">
-      <small>© 2023 Castillo development. All rights reserved.</small>
-    </footer>
-  );
-}
-
-function MainContent() {
-  return (
-    <div className="mainContent">
-      <h1>Por que estoy emocionado de aprender React</h1>
-      <ol>
-        <li>Es un nuevo paradigma para mi en cuanto a JavaScript</li>
-        <li>Me encanta aprender nuevas cosas</li>
-        <li>
-          Parece tener buena salida laboral lo que es perfecto puesto que estoy
-          desempleado
-        </li>
-        <li>
-          Siento que puede abrirme la puerta para trabajar dentro del mundo del
-          desarrollo que sinceramente, ¡me encanta!
-        </li>
-      </ol>
-    </div>
-  );
-}
-
-function NombreTemporal() {
+function App() {
   return (
     <div>
       <Header />
@@ -75,7 +34,7 @@ function NombreTemporal() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<NombreTemporal />);
+root.render(<App />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
