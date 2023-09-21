@@ -24,8 +24,13 @@ import logo from "./logo192.png";
 function Header() {
   return (
     <header>
-      <nav>
-        <img src={logo} alt="Logo" style={{ height: "40px" }} />
+      <nav  className="navbar">
+        <img src={logo} alt="Logo" className="navImage" />
+        <ul className="nav-items">
+          <li>Precios</li>
+          <li>Acerca de</li>
+          <li>Contactanos</li>
+        </ul>
       </nav>
     </header>
   );
@@ -33,7 +38,7 @@ function Header() {
 
 function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <small>© 2023 Castillo development. All rights reserved.</small>
     </footer>
   );
@@ -41,10 +46,10 @@ function Footer() {
 
 function MainContent() {
   return (
-    <div>
+    <div className="mainContent">
       <h1>Por que estoy emocionado de aprender React</h1>
       <ol>
-        <li>Es un nuevo paradigma para mi en cuanto a javaScript</li>
+        <li>Es un nuevo paradigma para mi en cuanto a JavaScript</li>
         <li>Me encanta aprender nuevas cosas</li>
         <li>
           Parece tener buena salida laboral lo que es perfecto puesto que estoy
