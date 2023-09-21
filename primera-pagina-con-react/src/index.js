@@ -24,7 +24,11 @@ import logo from "./logo192.png";
 function NombreTemporal() {
   return (
     <div>
-      <img src={logo} alt="Logo" style={{ height: "40px" }} />
+      <header>
+        <nav>
+          <img src={logo} alt="Logo" style={{ height: "40px" }} />
+        </nav>
+      </header>
       <h1>Por que estoy emocionado de aprender React</h1>
       <ol>
         <li>Es un nuevo paradigma para mi en cuanto a javaScript</li>
@@ -38,6 +42,9 @@ function NombreTemporal() {
           desarrollo que sinceramente, ¡me encanta!
         </li>
       </ol>
+      <footer>
+        <small>© 2023 Castillo development. All rights reserved.</small>
+      </footer>
     </div>
   );
 }
