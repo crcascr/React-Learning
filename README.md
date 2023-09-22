@@ -16,7 +16,7 @@ React es una biblioteca de JavaScript ampliamente utilizada para construir inter
 
 Aquí se encuentran los proyectos que he desarrollado como parte de mi aprendizaje de React:
 
-1. [Primeros pasos](/Primera%20p%C3%A1gina%20con%20React) - Toma de contacto con React y páginas básicas. Puedes consultar mi [tarjeta de visita digital](https://celadon-dragon-9f1b8e.netlify.app/) creada como resultado de esta parte.
+1. [Primeros pasos](/Primera%20p%C3%A1gina%20con%20React) - Toma de contacto con React y páginas básicas. Puedes consultar mi [tarjeta de visita digital](https://tourmaline-kitsune-e36550.netlify.app/) creada como resultado de esta parte.
 
 
 
