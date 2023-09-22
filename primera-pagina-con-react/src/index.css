@@ -11,7 +11,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-*/
 
 .navbar{
   display: flex;
@@ -46,6 +45,55 @@ code {
   text-align: center;
   background-color: cadetblue;
   padding-bottom: 0.5rem;
-  color: white;
-  
+  color: white;  
+}
+*/
+
+/*Inicio estilos proyecto 1 */
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: Inter,sans-serif;
+}
+
+.navBarP1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #21222A;
+  align-items: center;
+  height: 90px;
+}
+
+.nav--icon-and-image-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  color: #5fd9f9;
+}
+
+.nav--icon{
+  width: 30px;
+  height: 30px;
+}
+
+.nav--logo_text{
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.nav--title{
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 1rem;
+  color: #DEEBF8;
+  font-weight: 600;
 }
