@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 //import App from './App';
 import reportWebVitals from "./reportWebVitals";
-import Aplicacion from './Aplicacion'
+//import Aplicacion from './Aplicacion'
+import Proyecto1S from "./Proyecto1S";
 
 /*const page = (
   <div>
@@ -28,7 +29,7 @@ import Aplicacion from './Aplicacion'
 }*/
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Aplicacion />);
+root.render(<Proyecto1S />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

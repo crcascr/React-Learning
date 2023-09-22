@@ -50,7 +50,7 @@ code {
 */
 
 /*Inicio estilos proyecto 1 */
-
+/*
 *{
   box-sizing: border-box;
 }
@@ -128,5 +128,179 @@ body{
 
 .main--content-list li::marker{
   font-size: 1.4rem;
-  color: #5fd9f9;;
+  color: #0a66c2;;
+}
+*/
+
+/*Inicio estilos Tarjeta de negocios digital */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  height: 100vh;
+}
+
+.tarjetaCompleta {
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  background-color: #23252c;
+  border-radius: 10px;
+}
+
+.tarjetaContainer {
+  width: 317px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info--foto {
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.info--nombre {
+  margin: 0;
+  font-size: 25px;
+  color: #2b283a;
+  margin-top: 1.5rem;
+  font-weight: bold;
+}
+
+.info--puesto {
+  margin: 0;
+  font-size: 12.8px;
+  color: #f47d27;
+  margin-top: 0.3rem;
+  font-weight: normal;
+}
+
+.info--sitio-web {
+  margin: 0;
+  font-size: 10.24px;
+  color: #4a4e74;
+  margin-top: 0.5rem;
+  font-weight: normal;
+}
+
+.info--botones {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 1.1rem;
+}
+
+.info--mail {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  color: #374151;
+  background-color: white;
+  align-items: center;
+  width: 115px;
+  height: 34px;
+  justify-content: center;
+  border-radius: 6px;
+  border: thin solid #d1d5db;
+  text-decoration: none;
+}
+
+.info--linkedin {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: #0a66c2;
+  align-items: center;
+  width: 115px;
+  height: 34px;
+  justify-content: center;
+  border-radius: 6px;
+  border: thin solid #0a66c2;
+  text-decoration: none;
+}
+
+.info--icono {
+  margin-right: 0.5rem;
+  width: 16px;
+  height: 16px;
+}
+
+.tarjetaTexto {
+  margin: 0px 35px;
+  margin-top: 25px;
+}
+
+.acerca--titulo {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2b283a;
+}
+
+.acerca--descripcion {
+  margin: 0;
+  font-size: 10.24px;
+  font-weight: normal;
+  color: #2b283a;
+}
+
+.Intereses {
+  margin-top: 27px;
+  margin-bottom: 27px;
+}
+
+.intereses--titulo {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #2b283a;
+}
+
+.intereses--descripcion {
+  margin: 0;
+  font-size: 10.24px;
+  font-weight: normal;
+  color: #2b283a;
+}
+
+.Footer {
+  background-color: #d5d4d8;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer--icono,
+.footer--icono-instagram {
+  width: 25px;
+  height: 25px;
+}
+
+.footer--icono-instagram{
+  margin: 0px 24px;
 }
