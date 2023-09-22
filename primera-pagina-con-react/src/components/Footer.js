@@ -10,6 +10,7 @@ function Footer() {
         href="https://twitter.com/crcascr"
         className="footer--link"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <img className="footer--icono" src={twitter} alt="Icono Twitter (X)" />
       </a>
@@ -17,6 +18,7 @@ function Footer() {
         href="https://www.instagram.com/cristiancastill0/"
         className="footer--link"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <img className="footer--icono-instagram" src={instagram} alt="Icono Instagram" />
       </a>
@@ -24,6 +26,7 @@ function Footer() {
         href="https://github.com/crcascr"
         className="footer--link"
         target="_blank"
+        rel="noopener noreferrer"
       >
         <img className="footer--icono" src={github} alt="Icono GitHub" />
       </a>

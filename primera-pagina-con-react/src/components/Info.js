@@ -19,6 +19,7 @@ function Info() {
           href="https://www.linkedin.com/in/crcascr/"
           className="info--linkedin"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img className="info--icono" src={linkedin} alt="Icono LinkedIn" />
           LinkedIn
