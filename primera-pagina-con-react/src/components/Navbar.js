@@ -2,7 +2,6 @@ import React from "react";
 import logo from "../images/logo192.png";
 function Navbar() {
   return (
-    <header>
       <nav className="navBarP1">
         <div className="nav--icon-and-image-container">
           <img src={logo} alt="Logo" className="nav--icon" />
@@ -10,7 +9,6 @@ function Navbar() {
         </div>
         <h4 className="nav--title">Curso de React - Proyecto 1</h4>
       </nav>
-    </header>
   );
 }
 

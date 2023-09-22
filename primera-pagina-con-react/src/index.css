@@ -58,6 +58,7 @@ code {
 body{
   margin: 0;
   font-family: Inter,sans-serif;
+  height: 100vh;
 }
 
 .navBarP1{
@@ -96,4 +97,28 @@ body{
   margin-right: 1rem;
   color: #DEEBF8;
   font-weight: 600;
+}
+
+.mainP1{
+  background-color: #282D35;
+  padding: 57px 27px;
+  height: 100%;
+}
+
+.main--content-title{
+  margin: 0rem;
+  color: white;
+  font-size: 39px;
+  letter-spacing: -0.05em;
+}
+
+.main--content-list{
+  color: white;
+  margin-top: 46px;
+  max-width: 400px;
+}
+
+.main--content-list li{
+  line-height: 19px;
+  padding-block: 10px;
 }
