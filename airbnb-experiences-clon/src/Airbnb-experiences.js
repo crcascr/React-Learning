@@ -5,6 +5,7 @@ import Card from "./components/Card";
 /*import Contact from "./components/Contact";*/
 import Joke from "./components/Joke";
 import JokesData from "./components/JokesData";
+import Datos from "./data";
 
 function AirbnbExperiences() {
   /*const colors = [
@@ -16,31 +17,46 @@ function AirbnbExperiences() {
     <h3>Indigo</h3>,
     <h3>Violet</h3>
   ];*/
-  const jokeElements=JokesData.map(joke=>{
-    return <Joke
-            numero={joke.numero}
-            inicio={joke.setup}
-            fin={joke.punchline}/>    
-  })
-  console.log(jokeElements)
+  const jokeElements = JokesData.map((joke) => {
+    return (
+      <Joke numero={joke.numero} inicio={joke.setup} fin={joke.punchline} />
+    );
+  });
+  //console.log(jokeElements)
+
+  const elementosTarjeta = Datos.map((dato) => {
+    return (
+      <Card
+        img={dato.coverImg}
+        puntuacion={dato.stats.rating}
+        contadorOpiniones={dato.stats.reviewCount}
+        pais={dato.location}
+        titulo={dato.title}
+        precio={dato.price}
+      />
+    );
+  });
   return (
     <div className="AirbnbFullPage">
       <Navbar />
       <Hero />
-      <Card
-        img="katie-zaferes.png"
-        puntuacion={5.0}
-        contadorOpiniones={6}
-        pais="Estados Unidos"
-        titulo="Lecciones de vida con Katie Zaferes"
-        precio={136}
-      />
-      {jokeElements}
+      <div className="cardsContainer">{elementosTarjeta}</div>
     </div>
   );
 }
 
 export default AirbnbExperiences;
+
+/* Elemento previo para generar la tarjeta 
+<Card
+          img="katie-zaferes.png"
+          puntuacion={5.0}
+          contadorOpiniones={6}
+          pais="Estados Unidos"
+          titulo="Lecciones de vida con Katie Zaferes"
+          precio={136}
+        />
+/*
 
 /* Practica array.map() */
 /* Ejercicio 1

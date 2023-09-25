@@ -76,6 +76,8 @@ body {
   margin-top: 49px;
   margin-left: 37px;
   font-size: 12px;
+  display: flex;
+  gap: 18px;
 }
 
 .card--imagen{
