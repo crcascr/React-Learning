@@ -6,6 +6,15 @@ import Card from "./components/Card";
 import Joke from "./components/Joke";*/
 
 function AirbnbExperiences() {
+  const colors = [
+    <h3>Red</h3>,
+    <h3>Orange</h3>,
+    <h3>Yellow</h3>,
+    <h3>Green</h3>,
+    <h3>Blue</h3>,
+    <h3>Indigo</h3>,
+    <h3>Violet</h3>
+  ];
   return (
     <div className="AirbnbFullPage">
       <Navbar />
@@ -18,6 +27,7 @@ function AirbnbExperiences() {
         titulo="Lecciones de vida con Katie Zaferes"
         precio={136}
       />
+      <h3>{colors}</h3>
     </div>
   );
 }
