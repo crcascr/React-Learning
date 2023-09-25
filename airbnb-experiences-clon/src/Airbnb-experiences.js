@@ -34,6 +34,8 @@ function AirbnbExperiences() {
         pais={dato.location}
         titulo={dato.title}
         precio={dato.price}
+        puestosDisponibles={dato.openSpots}
+        ubicacion={dato.location}
       />
     );
   });

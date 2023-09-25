@@ -1,9 +1,19 @@
 import React from "react";
-//import katie from "../images/katie-zaferes.png";
 import star from "../images/star.png";
+
 function Card(props) {
+  let textoDisponibilidad;
+  if (props.puestosDisponibles === 0) {
+    textoDisponibilidad = "Agotado";
+  } else if (props.ubicacion === "Online") {
+    textoDisponibilidad = "En línea";
+  }
+  
   return (
     <div className="card">
+      {textoDisponibilidad && (
+        <div className="card--disponibilidad">{textoDisponibilidad}</div>
+      )}
       <img
         src={`/images/${props.img}`}
         alt="Foto tarjeta"

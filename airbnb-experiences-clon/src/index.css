@@ -21,12 +21,12 @@ body {
   font-family: Poppins, sans-serif;
 }
 
-.AirbnbFullPage{
+.AirbnbFullPage {
   width: 550px;
   border-radius: 8.95px;
 }
 
-.navAirbnb{
+.navAirbnb {
   height: 70px;
   width: 550px;
   display: flex;
@@ -36,30 +36,30 @@ body {
   border-top-left-radius: 8.95px;
 }
 
-.nav--icon{
+.nav--icon {
   height: 25.35px;
   width: 82.02px;
   margin-left: 30px;
 }
 
-.heroAirbnb{
+.heroAirbnb {
   margin-top: 26px;
   text-align: center;
 }
 
-.hero--imagenes{
+.hero--imagenes {
   width: 395.91px;
-  height: 232px;  
+  height: 232px;
 }
 
-.hero--titulo{
+.hero--titulo {
   margin: 0;
   text-align: left;
   margin-left: 36px;
   margin-top: 32px;
 }
 
-.hero--descripcion{
+.hero--descripcion {
   margin: 0;
   text-align: left;
   margin-left: 36px;
@@ -68,11 +68,11 @@ body {
   color: #222222;
 }
 
-.cardsContainer *{
+.cardsContainer * {
   margin: 0;
 }
 
-.cardsContainer{
+.cardsContainer {
   margin-top: 49px;
   margin-left: 37px;
   font-size: 12px;
@@ -81,61 +81,75 @@ body {
   overflow-x: auto;
 }
 
-.card{
+.card {
   width: 175px;
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
 }
 
-.card--imagen{
+.card--disponibilidad {
+  position: absolute;
+  z-index: 1;
+  width: 61px;
+  height: 20px;
+  margin-left: 6px;
+  margin-top: 6px;
+  color: #222222;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.card--imagen {
   border-radius: 9px;
   width: 176px;
   height: 235px;
   margin-bottom: 9px;
+  position: relative;
 }
 
-.card-valoracion{
-  display: flex;  
+.card-valoracion {
+  display: flex;
 }
 
-.card--valoracion-icono{
+.card--valoracion-icono {
   width: 14px;
   height: 14px;
   margin-right: 2px;
 }
 
-.card-valoracion-puntuacion{
+.card-valoracion-puntuacion {
   color: #222222;
   margin-right: 2px;
 }
 
 .card--valoracion-opiniones,
 .card--valoracion-separador,
-.card-valoracion-pais{
-  color: #918E9B;
-  margin-right: 2px;  
+.card-valoracion-pais {
+  color: #918e9b;
+  margin-right: 2px;
 }
 
-.card-precio{
+.card-precio {
   display: flex;
 }
 
-.card--descripcion{
+.card--descripcion {
   color: #222222;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .card-precio-inicio,
-.card-precio-monto{
+.card-precio-monto {
   font-weight: bold;
 }
 
 .card-precio-inicio,
 .card-precio-monto,
-.card-precio-cantidad{
-  margin-right: 2px;  
+.card-precio-cantidad {
+  margin-right: 2px;
 }
 
 /* Inicio seccion aprendizaje Atrezzo */
@@ -184,7 +198,7 @@ body {
 .info-group > p {
   margin-block: 3px;
   font-size: 12px;
-  color: #2B283A;
+  color: #2b283a;
 }
 
 /* Fin seccion aprendizaje Atrezzo */
