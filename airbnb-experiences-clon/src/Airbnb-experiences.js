@@ -27,6 +27,7 @@ function AirbnbExperiences() {
   const elementosTarjeta = Datos.map((dato) => {
     return (
       <Card
+        key={dato.id}
         img={dato.coverImg}
         puntuacion={dato.stats.rating}
         contadorOpiniones={dato.stats.reviewCount}
@@ -40,7 +41,7 @@ function AirbnbExperiences() {
     <div className="AirbnbFullPage">
       <Navbar />
       <Hero />
-      <div className="cardsContainer">{elementosTarjeta}</div>
+      <section className="cardsContainer">{elementosTarjeta}</section>
     </div>
   );
 }

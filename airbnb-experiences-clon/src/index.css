@@ -78,12 +78,21 @@ body {
   font-size: 12px;
   display: flex;
   gap: 18px;
+  overflow-x: auto;
+}
+
+.card{
+  width: 175px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .card--imagen{
   border-radius: 9px;
   width: 176px;
   height: 235px;
+  margin-bottom: 9px;
 }
 
 .card-valoracion{
@@ -114,6 +123,8 @@ body {
 
 .card--descripcion{
   color: #222222;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-precio-inicio,
