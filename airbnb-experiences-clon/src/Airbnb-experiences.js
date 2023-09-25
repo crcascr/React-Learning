@@ -24,6 +24,44 @@ function AirbnbExperiences() {
 
 export default AirbnbExperiences;
 
+/* Practica array.map() */
+/* Ejercicio 1
+Given an array of numbers, return an array of each number, squared
+*/
+/*
+const nums = [1, 2, 3, 4, 5];
+
+const numpot2 = nums.map((x) => x * x);
+
+console.log("Números al cuadrado: ", numpot2);
+*/
+/* Ejercicio 2
+Given an array of strings, return an array where 
+the first letter of each string is capitalized
+*/
+/*
+const names = ["alice", "bob", "charlie", "danielle"];
+
+const nombresMayus=names.map(nombre=>{
+    return nombre.charAt(0).toUpperCase() + nombre.slice(1);
+});
+
+console.log(nombresMayus)
+*/
+/* Ejercicio 3
+Given an array of strings, return an array of strings that wraps each
+of the original strings in an HTML-like <p></p> tag.
+
+E.g. given: ["Bulbasaur", "Charmander", "Squirtle"]
+return: ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
+*/
+/*
+const pokemon = ["Bulbasaur", "Charmander", "Squirtle"]
+
+const pokemonTags=pokemon.map(nombre=>`<p>${nombre}</p>`)
+
+console.log(pokemonTags)
+*/
 /* Parte de Contacto y Joke
 <div className="contacts">
         <Contact
