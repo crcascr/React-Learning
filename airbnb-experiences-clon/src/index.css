@@ -41,3 +41,28 @@ body {
   width: 82.02px;
   margin-left: 30px;
 }
+
+.heroAirbnb{
+  margin-top: 26px;
+  text-align: center;
+}
+
+.hero--imagenes{
+  width: 395.91px;
+  height: 232px;  
+}
+
+.hero--titulo{
+  margin: 0;
+  text-align: left;
+  margin-left: 36px;
+  margin-top: 32px;
+}
+
+.hero--descripcion{
+  margin: 0;
+  text-align: left;
+  margin-left: 36px;
+  margin-top: 16px;
+  width: 320px;
+}
