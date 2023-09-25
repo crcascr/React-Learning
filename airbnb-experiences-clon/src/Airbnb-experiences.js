@@ -36,23 +36,23 @@ function AirbnbExperiences() {
         email="pumpkin@scrimba.com"/>
       </div>
       <Joke
-      numero="1"
+      numero={1}
       inicio="¿Por qué el esqueleto no peleó?"
       fin="Porque no tenía agallas."/>
       <Joke
-      numero="2"
+      numero={2}
       inicio=" ¿Qué le dice un semáforo a otro semáforo?"
       fin="No me mires, me estoy cambiando."/>
       <Joke
-      numero="3"
+      numero={3}
       inicio="¿Por qué el libro de matemáticas se puso triste?"
       fin="Porque tenía demasiados problemas."/>
       <Joke
-      numero="4"
+      numero={4}
       inicio="¿Qué hace una abeja en el gimnasio?"
       fin="¡Zum-ba!"/>
       <Joke
-      numero="5"
+      numero={5}
       inicio="¿Cómo se dice pañuelo en japonés?"
       fin="Saka-moko."/>
     </div>
