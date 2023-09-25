@@ -2,11 +2,12 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
-/*import Contact from "./components/Contact";
-import Joke from "./components/Joke";*/
+/*import Contact from "./components/Contact";*/
+import Joke from "./components/Joke";
+import JokesData from "./components/JokesData";
 
 function AirbnbExperiences() {
-  const colors = [
+  /*const colors = [
     <h3>Red</h3>,
     <h3>Orange</h3>,
     <h3>Yellow</h3>,
@@ -14,7 +15,14 @@ function AirbnbExperiences() {
     <h3>Blue</h3>,
     <h3>Indigo</h3>,
     <h3>Violet</h3>
-  ];
+  ];*/
+  const jokeElements=JokesData.map(joke=>{
+    return <Joke
+            numero={joke.numero}
+            inicio={joke.setup}
+            fin={joke.punchline}/>    
+  })
+  console.log(jokeElements)
   return (
     <div className="AirbnbFullPage">
       <Navbar />
@@ -27,7 +35,7 @@ function AirbnbExperiences() {
         titulo="Lecciones de vida con Katie Zaferes"
         precio={136}
       />
-      <h3>{colors}</h3>
+      {jokeElements}
     </div>
   );
 }
