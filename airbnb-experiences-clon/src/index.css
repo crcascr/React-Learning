@@ -65,4 +65,62 @@ body {
   margin-left: 36px;
   margin-top: 16px;
   width: 320px;
+  color: #222222;
+}
+
+.cardsContainer *{
+  margin: 0;
+}
+
+.cardsContainer{
+  margin-top: 49px;
+  margin-left: 37px;
+  font-size: 12px;
+}
+
+.card--imagen{
+  border-radius: 9px;
+  width: 176px;
+  height: 235px;
+}
+
+.card-valoracion{
+  display: flex;  
+}
+
+.card--valoracion-icono{
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+}
+
+.card-valoracion-puntuacion{
+  color: #222222;
+  margin-right: 2px;
+}
+
+.card--valoracion-opiniones,
+.card--valoracion-separador,
+.card-valoracion-pais{
+  color: #918E9B;
+  margin-right: 2px;  
+}
+
+.card-precio{
+  display: flex;
+}
+
+.card--descripcion{
+  color: #222222;
+}
+
+.card-precio-inicio,
+.card-precio-monto{
+  font-weight: bold;
+}
+
+.card-precio-inicio,
+.card-precio-monto,
+.card-precio-cantidad{
+  margin-right: 2px;  
 }
