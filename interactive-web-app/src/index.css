@@ -1,0 +1,76 @@
+/*
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Karla, sans-serif;
+  margin-top: 2rem;
+  font-size: 12px;
+  background-color: #E5E5E5;
+}
+
+#root{
+  display: flex;
+  justify-content: center;
+}
+
+.memeGeneratorFullPage{
+  width: 550px;
+}
+
+.memeGeneratorFullPage *{
+  margin: 0;
+}
+
+.navMeme{
+  max-width: 550px;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background: content-box linear-gradient(to right,#672280, #A626D3);
+}
+
+.nav--logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.nav--icon{
+  width: 31.31px;
+  height: 26.22px;
+  margin-right: 6.69px;
+}
+
+.nav--nombre{
+  font-size: 20.75px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.nav--curso{
+  font-family: Inter,sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 37px;
+}
