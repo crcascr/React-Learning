@@ -6,7 +6,7 @@ import Datos from "./data";
 function TravelJournal(){
     const viajes=Datos.map((dato)=>{
         let ultimoDato;
-        if(dato.id==Datos.length){
+        if(dato.id===Datos.length){
             ultimoDato=true
         }else{
             ultimoDato=false

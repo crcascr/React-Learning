@@ -7,7 +7,7 @@ export default [
     fechaInicio: "12 Ene, 2021",
     fechaFin: "24 Ene, 2021",
     descripcion:
-      "El monte Fuji es la montaña más alta de Japón, con 3.776 metros. El monte Fuji es el lugar turístico más visitado de Japón, tanto por japoneses como por extranjeros.",
+      "El monte Fuji es la montaña más alta de Japón, con 3.776 metros. Es el lugar turístico más visitado de Japón, tanto por japoneses como por extranjeros.",
     linkImagen: "https://source.unsplash.com/WLxQvbMyfas",
   },
   {
