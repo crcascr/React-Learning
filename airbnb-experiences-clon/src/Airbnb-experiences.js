@@ -27,15 +27,8 @@ function AirbnbExperiences() {
   const elementosTarjeta = Datos.map((dato) => {
     return (
       <Card
-        key={dato.id}
-        img={dato.coverImg}
-        puntuacion={dato.stats.rating}
-        contadorOpiniones={dato.stats.reviewCount}
-        pais={dato.location}
-        titulo={dato.title}
-        precio={dato.price}
-        puestosDisponibles={dato.openSpots}
-        ubicacion={dato.location}
+        key={dato.id}        
+        dato={dato}
       />
     );
   });

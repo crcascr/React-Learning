@@ -1,11 +1,11 @@
 import React from "react";
 import star from "../images/star.png";
 
-function Card(props) {
+function Card(props) {  
   let textoDisponibilidad;
-  if (props.puestosDisponibles === 0) {
+  if (props.dato.openSpots === 0) {
     textoDisponibilidad = "Agotado";
-  } else if (props.ubicacion === "Online") {
+  } else if (props.dato.location === "Online") {
     textoDisponibilidad = "En línea";
   }
   
@@ -15,7 +15,7 @@ function Card(props) {
         <div className="card--disponibilidad">{textoDisponibilidad}</div>
       )}
       <img
-        src={`/images/${props.img}`}
+        src={`/images/${props.dato.coverImg}`}
         alt="Foto tarjeta"
         className="card--imagen"
       />
@@ -27,9 +27,9 @@ function Card(props) {
             className="card--valoracion-icono"
           />
         </span>
-        <p className="card-valoracion-puntuacion">{props.puntuacion}</p>
+        <p className="card-valoracion-puntuacion">{props.dato.stats.rating}</p>
         <p className="card--valoracion-opiniones">
-          ({props.contadorOpiniones})
+          ({props.dato.stats.reviewCount})
         </p>
         <span className="card--valoracion-separador">
           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10">
@@ -37,13 +37,13 @@ function Card(props) {
           </svg>
         </span>
 
-        <p className="card-valoracion-pais">{props.pais}</p>
+        <p className="card-valoracion-pais">{props.dato.location}</p>
       </div>
 
-      <p className="card--descripcion">{props.titulo}</p>
+      <p className="card--descripcion">{props.dato.title}</p>
       <div className="card-precio">
         <p className="card-precio-inicio">Desde $</p>
-        <p className="card-precio-monto">{props.precio}</p>
+        <p className="card-precio-monto">{props.dato.price}</p>
         <p className="card-precio-cantidad">/ persona</p>
       </div>
     </div>
