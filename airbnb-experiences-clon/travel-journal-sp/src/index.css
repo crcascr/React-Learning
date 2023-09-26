@@ -1,0 +1,129 @@
+/*body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  margin-top: 2rem;
+  font-size: 10.24px;
+}
+
+#root{
+  display: flex;
+  justify-content: center;
+}
+
+.pageContainer{
+  max-width: 550px;
+}
+
+.pageContainer *{
+  margin: 0;
+}
+
+.navTravel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  background-color: #F55A5A;
+  color: white;
+  border-radius: 8px;
+}
+
+.nav--icon{
+  width: 24px;
+  margin-right: 7px;
+}
+
+.nav--titulo{
+  font-weight: 500;
+  font-size: 14.46px;
+  letter-spacing: -0.75px;
+}
+
+.pageContent{
+  margin: 0px 40px;
+  margin-top: 27px;  
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  padding: 18px 0px;
+}
+
+.card-with-border{
+  border-bottom: 1px solid #F5F5F5;
+}
+
+.card--foto{
+  margin-right: 19px;
+}
+
+.card--imagen{
+  width: 125px;
+  height: 168px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.card--ubicacion-header{
+  display: flex;
+  align-items: center;
+}
+
+.card--ubicacion-icono{  
+  height: 10.24px;
+  margin-right: 4px;
+}
+
+.card--ubicacion-pais{
+  font-size: 10.24px;
+  letter-spacing: 1.7px;
+  margin-right: 12px;
+  color: #2B283A;
+}
+
+.card--ubicacion-maps{
+  color: #918E9B;
+  text-decoration: underline;
+}
+
+.card--ubicacion-detalles{
+  margin-top: 7px;
+  color: #2B283A;
+}
+
+.card--ubicacion-lugar{
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.card--ubicacion-fechas{
+  font-size: 10.24px;
+  margin-bottom: 9px;
+}
+
+.card--ubicacion-descripcion{
+  line-height: 150%;
+  color: #2B283A;
+}
