@@ -1,16 +1,21 @@
 import React from "react";
+import memesData from "../memesData"
 
 function Meme() {
+    let urlMeme;
   function recogeClick() {
-    console.log("Clic capturado");
+    const memesLenght=memesData.data.memes.length;
+
+    const numAleatorio=Math.floor(Math.random() * (memesLenght+1));
+    
+    urlMeme=memesData.data.memes[numAleatorio].url;
+    console.log(urlMeme)
   }
 
-  function recogeCursor() {
-    console.log("Cursor capturado");
-  }
+ 
   return (
     <main className="meme">
-      <form className="meme--form">
+      <div className="meme--form">
         <input
           type="text"
           className="meme--texto"
@@ -21,11 +26,10 @@ function Meme() {
           className="meme--texto"
           placeholder="Y tome mi dinero"
         ></input>
-      </form>
-      <img src="https://picsum.photos/640/360" onMouseEnter={recogeCursor} />
-      <button className="meme--boton" onClick={recogeClick}>
+        <button className="meme--boton" onClick={recogeClick}>
         Obtener un nuevo meme🖼️
       </button>
+      </div>      
     </main>
   );
 }
