@@ -75,19 +75,22 @@ body {
   margin-right: 37px;
 }
 
-main{
+main {
   padding: 36px;
 }
 
 .meme {
   background-color: white;
+  display: flex;
+  flex-direction: column;
 }
 
-.meme--form{
+.meme--form {
   display: grid;
   grid-template: 40px 40px / 1fr 1fr;
   justify-items: center;
   gap: 15px;
+  padding-bottom: 36px;
 }
 
 .meme--texto {
@@ -96,12 +99,12 @@ main{
   border: 1px solid #d5d4d8;
   border-radius: 5px;
   font-family: Karla, sans-serif;
-  color: #0D0D0D;
+  color: #0d0d0d;
   font-size: 12px;
   text-indent: 11px;
 }
 
-.meme--boton{
+.meme--boton {
   width: 447px;
   height: 40px;
   border-radius: 5px;
