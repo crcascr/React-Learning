@@ -1,5 +1,7 @@
 import React from "react";
 import memesData from "../memesData";
+import App from "./App";
+import Cliente from "./Cliente";
 
 function Meme() {
   /*function saludo(nombre) {
@@ -20,20 +22,8 @@ function Meme() {
     console.log("Good",momentoDia,nombre);
     
   }*/
-  const [url, setUrl] = React.useState("");
-  function recogeClick() {
-    const memesLenght = memesData.data.memes.length;
 
-    const numAleatorio = Math.floor(Math.random() * memesLenght);
-    console.log(numAleatorio);
-
-    const urlMeme = memesData.data.memes[numAleatorio].url;
-    console.log("Url obtenida:", urlMeme);
-    setUrl(urlMeme);
-    //saludo("Cristian");
-  }
-  /*console.log(url);
-
+  /*
   const [result, setResult] = React.useState("Yes");
   //console.log(result);
 
@@ -138,7 +128,7 @@ function Meme() {
   */
 
   //Objetos en useState
-  
+  /*
   const [contact, setContact] = React.useState({
     firstName: "John",
     lastName: "Doe",
@@ -147,11 +137,16 @@ function Meme() {
     isFavorite: false,
   });
 
-  let estrella=contact.isFavorite ?"star-filled.png":"star-empty.png"
-  
+  let estrella = contact.isFavorite ? "star-filled.png" : "star-empty.png";
 
   function toggleFavorite() {
-    console.log("Toggle Favorite");
+    //console.log("Toggle Favorite");
+    setContact((prevContact) => {
+      return {
+        ...prevContact,
+        isFavorite: !prevContact.isFavorite,
+      };
+    });
   }
   return (
     <main className="meme">
@@ -176,7 +171,7 @@ function Meme() {
         <article className="card">
           <div className="card--info">
             <h2 className="card--favorite" onClick={toggleFavorite}>
-              Marcar favorito ${estrella}
+              Marcar favorito {estrella}
             </h2>
             <h2 className="card--name">
               {contact.firstName} {contact.lastName}
@@ -186,6 +181,54 @@ function Meme() {
           </div>
         </article>
       </div>
+    </main>
+  );
+  */
+
+  const [meme, setMeme] = React.useState({
+    topText: "",
+    bottomText: "",
+    randomImage: "",
+  });
+  const [allMemeImages, setAllMemesImages] = React.useState(memesData);
+  function recogeClick() {
+    const memesLenght = memesData.data.memes.length;
+
+    const numAleatorio = Math.floor(Math.random() * memesLenght);
+    console.log(numAleatorio);
+
+    const urlMeme = allMemeImages.data.memes[numAleatorio].url;
+    console.log("Url obtenida:", urlMeme);
+    setMeme((prevMeme) => {
+      return {
+        ...prevMeme,
+        randomImage: urlMeme,
+      };
+    });
+    //saludo("Cristian");
+  }
+  //console.log(url);
+
+  return (
+    <main className="meme">
+      <div className="meme--form">
+        <input
+          type="text"
+          className="meme--texto"
+          placeholder="Callese"
+        ></input>
+        <input
+          type="text"
+          className="meme--texto"
+          placeholder="Y tome mi dinero"
+        ></input>
+        <button className="meme--boton" onClick={recogeClick}>
+          Obtener un nuevo meme🖼️
+        </button>
+      </div>
+      <img className="meme--imagen" src={meme.randomImage} />
+      <App />
+      <Cliente />
     </main>
   );
 }
