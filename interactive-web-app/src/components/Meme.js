@@ -232,7 +232,7 @@ function Meme() {
       <App />
       <Cliente />
       <Saludo/>
-      <AppCajas/>
+      <AppCajas modoOscuro={false}/>
     </main>
   );
 }

@@ -1,19 +1,18 @@
 import React from "react";
 import "./Cajas.css";
 import datosCajas from "./datosCajas";
+import Caja from "./Caja";
 
-function AppCajas() {
+function AppCajas(props) {
   const [cajas, setCajas] = React.useState(datosCajas);
-  const elementos=cajas.map((caja=>{
-    return(
-    <div className="caja" key={caja.id}>{caja.id}</div>
-    )
-  }))
-  return (
-    <main className="mainCajas">
-      {elementos}     
-    </main>
-  );
+  const estilos = {
+    backgroundColor: props.modoOscuro ? "#222222" : "#cccccc",
+    color: props.modoOscuro ? "#ffffff" : "#222222",
+  };
+  const elementos = cajas.map((caja) => {
+    return <Caja key={caja.id} activa={caja.on} numero={caja.id} />;
+  });
+  return <main className="mainCajas">{elementos}</main>;
 }
 
 export default AppCajas;
