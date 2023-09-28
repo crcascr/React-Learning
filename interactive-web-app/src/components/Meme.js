@@ -1,7 +1,8 @@
 import React from "react";
 import memesData from "../memesData";
-import App from "./App";
-import Cliente from "./Cliente";
+import App from "./Contador/AppContador";
+import Cliente from "./Cliente/Cliente";
+import Saludo from "./Saludo/Saludo";
 
 function Meme() {
   /*function saludo(nombre) {
@@ -229,6 +230,7 @@ function Meme() {
       <img className="meme--imagen" src={meme.randomImage} />
       <App />
       <Cliente />
+      <Saludo/>
     </main>
   );
 }
