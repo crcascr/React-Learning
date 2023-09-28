@@ -5,12 +5,13 @@ import Caja from "./Caja";
 
 function AppCajas(props) {
   const [cajas, setCajas] = React.useState(datosCajas);
-  const estilos = {
-    backgroundColor: props.modoOscuro ? "#222222" : "#cccccc",
-    color: props.modoOscuro ? "#ffffff" : "#222222",
-  };
+
+  function cambiarColor(numero) {
+    console.log(`clic capturado de`,numero)
+  }
+
   const elementos = cajas.map((caja) => {
-    return <Caja key={caja.id} activa={caja.on} numero={caja.id} />;
+    return <Caja key={caja.id} activa={caja.on} numero={caja.id} invertirColor={cambiarColor} />;
   });
   return <main className="mainCajas">{elementos}</main>;
 }
