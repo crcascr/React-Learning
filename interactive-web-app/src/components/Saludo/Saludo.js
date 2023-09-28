@@ -4,10 +4,11 @@ import Header from "./Header";
 import Body from "./Body";
 
 function Saludo() {
+    const [user, setUser] = React.useState("Joe");
   return (
     <main className="mainSaludo">
-      <Header />
-      <Body />
+      <Header usuario={user}/>
+      <Body usuario={user}/>
     </main>
   );
 }

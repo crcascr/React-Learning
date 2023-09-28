@@ -1,9 +1,9 @@
 import React from "react";
 
-function Body() {
+function Body(props) {
   return (
     <section>
-      <h1>Welcome back, ___!</h1>
+      <h1>Welcome back, {props.usuario}!</h1>
     </section>
   );
 }

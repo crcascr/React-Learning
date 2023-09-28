@@ -3,6 +3,7 @@ import memesData from "../memesData";
 import App from "./Contador/AppContador";
 import Cliente from "./Cliente/Cliente";
 import Saludo from "./Saludo/Saludo";
+import AppCajas from "./Cajas/AppCajas";
 
 function Meme() {
   /*function saludo(nombre) {
@@ -231,6 +232,7 @@ function Meme() {
       <App />
       <Cliente />
       <Saludo/>
+      <AppCajas/>
     </main>
   );
 }

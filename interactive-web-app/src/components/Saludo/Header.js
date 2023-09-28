@@ -1,10 +1,10 @@
 import React from "react";
 
-function Header() {
-  const [user, setUser] = React.useState("Joe");
+function Header(props) {
+  
   return (
     <header>
-      <p>Current user: {user}</p>
+      <p>Current user: {props.usuario}</p>
     </header>
   );
 }

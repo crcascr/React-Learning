@@ -1,7 +1,6 @@
 import React from "react";
 
 function Estrella(props) {
-  console.log(props);
   let starIcon = props.estaLlena ? "star-filled.png" : "star-empty.png";
   return (
     <img
