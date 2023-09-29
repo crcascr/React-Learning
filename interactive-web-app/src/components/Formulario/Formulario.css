@@ -1,0 +1,11 @@
+.formFormulario{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 1rem;
+    align-items: center;
+}
+
+input,textarea{
+    width: 100%;
+}
