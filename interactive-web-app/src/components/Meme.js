@@ -5,6 +5,7 @@ import Cliente from "./Cliente/Cliente";
 import Saludo from "./Saludo/Saludo";
 import AppCajas from "./Cajas/AppCajas";
 import AppChistes from "./Chistes/AppChistes";
+import AppMensajes from "./Mensajes/AppMensajes";
 
 function Meme() {
   /*function saludo(nombre) {
@@ -235,6 +236,7 @@ function Meme() {
       <Saludo/>
       <AppCajas modoOscuro={false}/>
       <AppChistes/>
+      <AppMensajes/>
     </main>
   );
 }
