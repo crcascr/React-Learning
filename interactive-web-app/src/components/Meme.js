@@ -7,6 +7,7 @@ import AppCajas from "./Cajas/AppCajas";
 import AppChistes from "./Chistes/AppChistes";
 import AppMensajes from "./Mensajes/AppMensajes";
 import AppFormulario from "./Formulario/AppFormulario";
+import FormularioInscripcion from "./Formulario Inscripcion/FormularioInscripcion";
 
 function Meme() {
   /*function saludo(nombre) {
@@ -232,6 +233,7 @@ function Meme() {
         </button>
       </div>
       <img className="meme--imagen" src={meme.randomImage} />
+      <FormularioInscripcion/>
       <App />
       <Cliente />
       <Saludo/>
