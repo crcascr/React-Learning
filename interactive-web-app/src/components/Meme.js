@@ -8,6 +8,7 @@ import AppMensajes from "./Mensajes/AppMensajes";
 import AppFormulario from "./Formulario/AppFormulario";
 import FormularioInscripcion from "./Formulario Inscripcion/FormularioInscripcion";
 import AppUseEffect from "./UseEffect/AppUseEffect";
+import AppWindowTracker from "./WindowTracker/AppWindowTracker";
 
 function Meme() {
   /*function saludo(nombre) {
@@ -262,8 +263,9 @@ function Meme() {
         <h2 className="meme--text bottom">{meme.bottomText}</h2>
       </div>
 
+      <AppWindowTracker/>
       <FormularioInscripcion />
-      <AppUseEffect />
+      <AppUseEffect />      
       <App />
       <Cliente />
       <Saludo />

@@ -1,0 +1,19 @@
+.WindowTracker--container{
+    background-color: #FF7C43;
+    color: white;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.WindowTracker--container button{
+    border: none;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.WindowTracker--container h1{
+    text-align: center;
+}
