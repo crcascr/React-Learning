@@ -1,5 +1,4 @@
 import React from "react";
-import memesData from "../memesData";
 import App from "./Contador/AppContador";
 import Cliente from "./Cliente/Cliente";
 import Saludo from "./Saludo/Saludo";
@@ -8,6 +7,7 @@ import AppChistes from "./Chistes/AppChistes";
 import AppMensajes from "./Mensajes/AppMensajes";
 import AppFormulario from "./Formulario/AppFormulario";
 import FormularioInscripcion from "./Formulario Inscripcion/FormularioInscripcion";
+import AppUseEffect from "./UseEffect/AppUseEffect";
 
 function Meme() {
   /*function saludo(nombre) {
@@ -196,15 +196,23 @@ function Meme() {
     bottomText: "",
     randomImage: "",
   });
-  const [allMemeImages, setAllMemesImages] = React.useState(memesData);
+
+  const [allMemes, setAllMemes] = React.useState([]);
+
+  React.useEffect(function () {
+    fetch("https://api.imgflip.com/get_memes")
+      .then((res) => res.json())
+      .then((data) => setAllMemes(data.data.memes));
+  }, []);
+
   function recogeClick() {
-    const memesLenght = memesData.data.memes.length;
+    const memesLenght = allMemes.length;
 
     const numAleatorio = Math.floor(Math.random() * memesLenght);
-    console.log(numAleatorio);
+    //console.log(numAleatorio);
 
-    const urlMeme = allMemeImages.data.memes[numAleatorio].url;
-    console.log("Url obtenida:", urlMeme);
+    const urlMeme = allMemes[numAleatorio].url;
+    //console.log("Url obtenida:", urlMeme);
     setMeme((prevMeme) => {
       return {
         ...prevMeme,
@@ -215,32 +223,54 @@ function Meme() {
   }
   //console.log(url);
 
+  function manejarCambios(event) {
+    setMeme((prevMeme) => {
+      const { name, value } = event.target;
+      return {
+        ...prevMeme,
+        [name]: value,
+      };
+    });
+  }
+
   return (
-    <main className="meme">
+    <main className="meme-main">
       <div className="meme--form">
         <input
           type="text"
           className="meme--texto"
-          placeholder="Callese"
+          placeholder="Texto superior"
+          name="topText"
+          onChange={manejarCambios}
+          value={meme.topText}
         ></input>
         <input
           type="text"
           className="meme--texto"
-          placeholder="Y tome mi dinero"
+          placeholder="Texto inferior"
+          name="bottomText"
+          onChange={manejarCambios}
+          value={meme.bottomText}
         ></input>
         <button className="meme--boton" onClick={recogeClick}>
           Obtener un nuevo meme🖼️
         </button>
       </div>
-      <img className="meme--imagen" src={meme.randomImage} />
-      <FormularioInscripcion/>
+      <div className="meme">
+        <img className="meme--imagen" src={meme.randomImage} />
+        <h2 className="meme--text top">{meme.topText}</h2>
+        <h2 className="meme--text bottom">{meme.bottomText}</h2>
+      </div>
+
+      <FormularioInscripcion />
+      <AppUseEffect />
       <App />
       <Cliente />
-      <Saludo/>
-      <AppCajas modoOscuro={false}/>
-      <AppChistes/>
-      <AppMensajes/>
-      <AppFormulario/>
+      <Saludo />
+      <AppCajas modoOscuro={false} />
+      <AppChistes />
+      <AppMensajes />
+      <AppFormulario />
     </main>
   );
 }
