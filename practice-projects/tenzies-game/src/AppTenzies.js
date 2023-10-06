@@ -22,11 +22,16 @@ const elementoNumero=numeros.map((numero)=>{
     )
 })
 
+function mezclar(){
+    setNumeros(todosNumerosDado())
+}
+
   return (
     <main>
       <div className="numeros">
         {elementoNumero}
       </div>
+      <button className="botonMezclar" onClick={mezclar}>Mezclar</button>
     </main>
   );
 }
