@@ -13,23 +13,19 @@ function todosNumerosDado(){
     return arregloNumeros
     
 }
-console.log(todosNumerosDado())
 
+const[numeros,setNumeros]=React.useState(todosNumerosDado())
 
+const elementoNumero=numeros.map((numero)=>{
+    return(
+        <Arreglo numero={numero}/>
+    )
+})
 
   return (
     <main>
       <div className="numeros">
-        <Arreglo numero={1} />
-        <Arreglo numero={2} />
-        <Arreglo numero={3} />
-        <Arreglo numero={4} />
-        <Arreglo numero={5} />
-        <Arreglo numero={6} />
-        <Arreglo numero={6} />
-        <Arreglo numero={5} />
-        <Arreglo numero={4} />
-        <Arreglo numero={3} />
+        {elementoNumero}
       </div>
     </main>
   );
