@@ -8,16 +8,32 @@ function AppTenzies() {
 
     for (let i = 0; i < 10; i++) {
       const numeroDado = Math.ceil(Math.random() * 6);
-      arregloNumeros.push({ valor: numeroDado, ocupado: true, id: nanoid() });
+      arregloNumeros.push({ valor: numeroDado, ocupado: false, id: nanoid() });
     }
     return arregloNumeros;
   }
 
   const [numeros, setNumeros] = React.useState(todosNumerosDado());
 
+  function mantenerOcupado(id) {
+    //console.log("ID número:", id);
+    setNumeros((prevNumeros) => {
+      return prevNumeros.map((numero) => {
+        return numero.id === id
+          ? { ...numero, ocupado: !numero.ocupado }
+          : numero;
+      });
+    });
+  }
+
   const elementoNumero = numeros.map((numero) => {
     return (
-      <Arreglo numero={numero.valor} key={numero.id} ocupado={numero.ocupado} />
+      <Arreglo
+        numero={numero.valor}
+        key={numero.id}
+        ocupado={numero.ocupado}
+        mantenerOcupado={() => mantenerOcupado(numero.id)}
+      />
     );
   });
 
