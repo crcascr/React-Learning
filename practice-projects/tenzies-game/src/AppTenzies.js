@@ -3,12 +3,18 @@ import Arreglo from "./Components/Arreglo";
 import { nanoid } from "nanoid";
 
 function AppTenzies() {
+  function nuevoNumero() {
+    return {
+      valor: Math.ceil(Math.random() * 6),
+      ocupado: false,
+      id: nanoid(),
+    };
+  }
+
   function todosNumerosDado() {
     const arregloNumeros = [];
-
     for (let i = 0; i < 10; i++) {
-      const numeroDado = Math.ceil(Math.random() * 6);
-      arregloNumeros.push({ valor: numeroDado, ocupado: false, id: nanoid() });
+      arregloNumeros.push(nuevoNumero());
     }
     return arregloNumeros;
   }
@@ -38,14 +44,24 @@ function AppTenzies() {
   });
 
   function mezclar() {
-    setNumeros(todosNumerosDado());
+    //setNumeros(todosNumerosDado());
+    setNumeros((prevNumeros) => {
+      return prevNumeros.map((numero) => {
+        return numero.ocupado ? numero : nuevoNumero();
+      });
+    });
   }
 
   return (
     <main>
+      <h1 className="titulo">Tenzies</h1>
+      <p className="instrucciones">
+        Lanza hasta que todos los dados sean iguales. Haz clic en cada dado para
+        fijarlo entre lanzamiento y lanzamiento.
+      </p>
       <div className="numeros">{elementoNumero}</div>
       <button className="botonMezclar" onClick={mezclar}>
-        Mezclar
+        Lanzar dados
       </button>
     </main>
   );
