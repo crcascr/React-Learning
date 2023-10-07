@@ -4,6 +4,8 @@ import { nanoid } from "nanoid";
 import Confetti from "react-confetti";
 
 function AppTenzies() {
+  const [movimientos, setMovimientos] = React.useState(0);
+
   function nuevoNumero() {
     return {
       valor: Math.ceil(Math.random() * 6),
@@ -23,6 +25,9 @@ function AppTenzies() {
   const [numeros, setNumeros] = React.useState(todosNumerosDado());
 
   function mantenerOcupado(id) {
+    setMovimientos((prevMovimientos) => {
+      return prevMovimientos + 1;
+    });
     //console.log("ID número:", id);
     setNumeros((prevNumeros) => {
       return prevNumeros.map((numero) => {
@@ -53,6 +58,7 @@ function AppTenzies() {
     if (juego) {
       setNumeros(todosNumerosDado());
       setJuego(false);
+      setMovimientos(0);
     }
   }
 
@@ -66,11 +72,11 @@ function AppTenzies() {
     if (todosIguales && todosOcupados) {
       setJuego(true);
     }
-  }, [numeros]);  
+  }, [numeros]);
 
   return (
     <main>
-      {juego&&<Confetti/>}
+      {juego && <Confetti />}
       <h1 className="titulo">Tenzies</h1>
       <p className="instrucciones">
         Lanza hasta que todos los dados sean iguales. Haz clic en cada dado para
@@ -80,6 +86,13 @@ function AppTenzies() {
       <button className="botonMezclar" onClick={mezclar}>
         {juego ? "Nuevo juego" : "Lanzar dados"}
       </button>
+      <div className="indicadores">
+        <p className="indicadores--movimientos">
+          {juego===false
+            ? `Llevas ${movimientos} movimientos`
+            : `Necesitaste ${movimientos} movimientos para ganar`}
+        </p>
+      </div>
     </main>
   );
 }
