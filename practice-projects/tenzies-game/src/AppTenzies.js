@@ -1,6 +1,7 @@
 import React from "react";
 import Arreglo from "./Components/Arreglo";
 import { nanoid } from "nanoid";
+import Confetti from "react-confetti";
 
 function AppTenzies() {
   function nuevoNumero() {
@@ -44,16 +45,32 @@ function AppTenzies() {
   });
 
   function mezclar() {
-    //setNumeros(todosNumerosDado());
     setNumeros((prevNumeros) => {
       return prevNumeros.map((numero) => {
         return numero.ocupado ? numero : nuevoNumero();
       });
     });
+    if (juego) {
+      setNumeros(todosNumerosDado());
+      setJuego(false);
+    }
   }
+
+  const [juego, setJuego] = React.useState(false);
+
+  React.useEffect(() => {
+    const todosOcupados = numeros.every((numero) => numero.ocupado);
+    const todosIguales = numeros.every(
+      (numero) => numero.valor === numeros[0].valor
+    );
+    if (todosIguales && todosOcupados) {
+      setJuego(true);
+    }
+  }, [numeros]);  
 
   return (
     <main>
+      {juego&&<Confetti/>}
       <h1 className="titulo">Tenzies</h1>
       <p className="instrucciones">
         Lanza hasta que todos los dados sean iguales. Haz clic en cada dado para
@@ -61,7 +78,7 @@ function AppTenzies() {
       </p>
       <div className="numeros">{elementoNumero}</div>
       <button className="botonMezclar" onClick={mezclar}>
-        Lanzar dados
+        {juego ? "Nuevo juego" : "Lanzar dados"}
       </button>
     </main>
   );
