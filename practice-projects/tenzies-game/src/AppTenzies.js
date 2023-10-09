@@ -90,7 +90,7 @@ function AppTenzies() {
         return numero.ocupado ? numero : nuevoNumero();
       });
     });
-    if(movimientos>0){
+    if (movimientos > 0) {
       setMovimientos((prevMovimientos) => {
         return prevMovimientos + 1;
       });
@@ -107,7 +107,7 @@ function AppTenzies() {
   }
 
   const [juego, setJuego] = React.useState(false);
-  let prevMejorTiempo;
+  let prevMejorTiempo = 0;
 
   if (JSON.parse(localStorage.getItem("mejorTiempo")) != null) {
     prevMejorTiempo = JSON.parse(localStorage.getItem("mejorTiempo"));
@@ -125,17 +125,23 @@ function AppTenzies() {
     if (todosIguales && todosOcupados) {
       setJuego(true);
       detenerCronometro();
-      if (tiempo.tiempo < prevMejorTiempo || mejorTiempo === null) {
+      if (prevMejorTiempo === 0) {
         setMejorTiempo(tiempo.tiempo);
-        localStorage.setItem("mejorTiempo", mejorTiempo);
+        localStorage.setItem("mejorTiempo", tiempo.tiempo);
+      }
+      if (mejorTiempo === null) {
+        setMejorTiempo(tiempo.tiempo);
+        localStorage.setItem("mejorTiempo", tiempo.tiempo);
+      }
+      if (tiempo.tiempo < prevMejorTiempo) {
+        setMejorTiempo(tiempo.tiempo);
+        localStorage.setItem("mejorTiempo", tiempo.tiempo);
       }
     }
   }, [numeros]);
 
   const minutos = Math.floor(tiempo.tiempo / 60);
   const segundos = tiempo.tiempo % 60;
-
-  
 
   function arregloTiempo(min, seg) {
     function arregloSeg(seg) {
@@ -183,16 +189,8 @@ function AppTenzies() {
             : `Llevas ${arregloTiempo(minutos, segundos)}`}
         </p>
         <p className="indicadores--mejorTiempo">
-          {juego
-            ? tiempo.tiempo < prevMejorTiempo
-              ? `¡WOW tienes un nuevo record de ${arregloTiempo(
-                  minutos,
-                  segundos
-                )}!`
-              : `Falto poco tu mejor tiempo es ${arregloTiempo(
-                  Math.floor(prevMejorTiempo / 60),
-                  prevMejorTiempo % 60
-                )}`
+          {prevMejorTiempo === 0
+            ? ""
             : `Tu mejor tiempo es ${arregloTiempo(
                 Math.floor(prevMejorTiempo / 60),
                 prevMejorTiempo % 60
