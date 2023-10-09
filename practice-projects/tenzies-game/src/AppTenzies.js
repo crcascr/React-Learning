@@ -6,6 +6,39 @@ import Confetti from "react-confetti";
 function AppTenzies() {
   const [movimientos, setMovimientos] = React.useState(0);
 
+  const [tiempo, setTiempo] = React.useState({
+    tiempo: 0,
+    corriendo: false,
+    intervalo: null,
+  });
+
+  function iniciarCronometro() {
+    const intervalo = setInterval(() => {
+      setTiempo((prevTiempo) => ({
+        ...prevTiempo,
+        tiempo: prevTiempo.tiempo + 1,
+      }));
+    }, 1000);
+
+    setTiempo((prevTiempo) => ({
+      ...prevTiempo,
+      corriendo: true,
+      intervalo: intervalo,
+    }));
+  }
+
+  function detenerCronometro() {
+    if (tiempo.intervalo) {
+      clearInterval(tiempo.intervalo);
+    }
+
+    setTiempo((prevTiempo) => ({
+      ...prevTiempo,
+      corriendo: false,
+      intervalo: null,
+    }));
+  }
+
   function nuevoNumero() {
     return {
       valor: Math.ceil(Math.random() * 6),
@@ -25,6 +58,9 @@ function AppTenzies() {
   const [numeros, setNumeros] = React.useState(todosNumerosDado());
 
   function mantenerOcupado(id) {
+    if (movimientos === 0) {
+      iniciarCronometro();
+    }
     setMovimientos((prevMovimientos) => {
       return prevMovimientos + 1;
     });
@@ -59,6 +95,10 @@ function AppTenzies() {
       setNumeros(todosNumerosDado());
       setJuego(false);
       setMovimientos(0);
+      setTiempo((prevTiempo) => ({
+        ...prevTiempo,
+        tiempo: 0,
+      }));
     }
   }
 
@@ -71,8 +111,34 @@ function AppTenzies() {
     );
     if (todosIguales && todosOcupados) {
       setJuego(true);
+      detenerCronometro();
     }
   }, [numeros]);
+
+  const minutos = Math.floor(tiempo.tiempo / 60);
+  const segundos = tiempo.tiempo % 60;
+
+  var complementoSegundos = "";
+  var complementoMinutos = "";
+  var mensaje = "";
+
+  if (segundos === 1) {
+    complementoSegundos = "segundo";
+  } else {
+    complementoSegundos = "segundos";
+  }
+
+  if (minutos === 1) {
+    complementoMinutos = "minuto";
+  } else {
+    complementoMinutos = "minutos";
+  }
+
+  if (minutos < 1) {
+    mensaje = `${segundos} ${complementoSegundos}`;
+  } else {
+    mensaje = `${minutos} ${complementoMinutos} y ${segundos} ${complementoSegundos}`;
+  }
 
   return (
     <main>
@@ -84,13 +150,16 @@ function AppTenzies() {
       </p>
       <div className="numeros">{elementoNumero}</div>
       <button className="botonMezclar" onClick={mezclar}>
-        {juego ? "Nuevo juego" : "Lanzar dados"}
+        {juego ? "Nuevo juego" : "Lanzar"}
       </button>
       <div className="indicadores">
         <p className="indicadores--movimientos">
-          {juego===false
-            ? `Llevas ${movimientos} movimientos`
-            : `Necesitaste ${movimientos} movimientos para ganar`}
+          {juego
+            ? `Necesitaste ${movimientos} movimientos para ganar`
+            : `Llevas ${movimientos} movimientos`}
+        </p>
+        <p className="indicadores--tiempo">
+          {juego ? `Necesitaste ${mensaje} para ganar` : `Llevas ${mensaje}`}
         </p>
       </div>
     </main>
