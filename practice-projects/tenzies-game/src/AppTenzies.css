@@ -47,6 +47,44 @@ main {
   align-content: center;
 }
 
+.dado-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 8vw; /* Establece el ancho deseado */
+  height: 8vw; /* Establece la altura deseada */
+}
+
+.dado-grilla {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr); /* Crea 3 columnas iguales */
+  gap: 4px; /* Espacio entre las celdas (ajusta según tus preferencias) */
+  align-items: center;
+}
+
+
+
+/* Estilos adicionales para las celdas de la grilla (puntos) */
+.punto {
+  min-width: 1vw; /* Tamaño mínimo deseado para los puntos */
+  min-height: 2.5vw; /* Tamaño mínimo deseado para los puntos */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+.dado--activo{
+  background-color: #0b2434;
+  
+}
+
+.dado--inactivo{
+  background-color: transparent;  
+}
+
 .numeros--numero {
   display: flex;
   width: 8vw;
@@ -83,4 +121,11 @@ main {
 
 .botonMezclar:active {
     box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+
+.indicadores{
+  display: flex;
+  gap: 2rem;
+  font-size: 1.5vw;
+  flex-wrap: wrap;
 }
