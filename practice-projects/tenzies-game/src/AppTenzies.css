@@ -63,14 +63,13 @@ main {
   grid-template-columns: repeat(3, 2fr); 
   gap: 4px; 
   align-items: center;
+  justify-items: center;
 }
 
 
 .punto {
-  min-width: 1vw;
-  min-height: 2.5vw; 
-  width: 100%;
-  height: 100%;
+  width: 2.4vw;
+  height: 2.4vw;
   border-radius: 50%;
   margin: 2px 0px;
 }
@@ -98,6 +97,7 @@ main {
   font-size: 4vw;
   cursor: pointer;
 }
+
 
 .botonMezclar {
   height: 7vw;
