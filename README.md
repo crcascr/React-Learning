@@ -22,7 +22,7 @@ Aquí se encuentran los proyectos que he desarrollado como parte de mi aprendiza
 
 4. [Proyectos de Práctica](/practice-projects) - En esta etapa final del curso, se han desarrollado proyectos que permiten aplicar los conocimientos previamente adquiridos. 
 - [WebApp de Notas](https://incredible-syrniki-842a1c.netlify.app/): Una aplicación web que permite almacenar y organizar notas en una base de datos de [Google Firebase](https://firebase.google.com/?hl=es-419). Las notas se ordenan automáticamente según la fecha de modificación.
-- [Juego de Tenzies](https://clever-chimera-f1596f.netlify.app/): Un emocionante juego en el que el objetivo es igualar las caras de los 10 dados en el menor tiempo posible. El juego registra el tiempo de juego y el número de movimientos en el almacenamiento local. Si logras un nuevo mejor tiempo, se actualizará automáticamente.
+- [Juego de Tenzies](https://clever-chimera-f1596f.netlify.app/): Un emocionante juego en el que el objetivo es igualar las caras de los 10 dados en el menor tiempo posible. El juego registra el tiempo de juego, el número de movimientos y el mejor tiempo, este último en el almacenamiento local. Si logras una nueva marca, se actualizará automáticamente.
 
 
 ## Recursos
