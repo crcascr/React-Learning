@@ -20,7 +20,9 @@ Aquí se encuentran los proyectos que he desarrollado como parte de mi aprendiza
 2. [Clon de experiencias Airbnb](/airbnb-experiences-clon) - Clon de la página de experiencias de Airbnb para el aprendizaje de manejo de datos con React. Puedes consultar el [diario de viaje](https://eloquent-bubblegum-6779f1.netlify.app/) creado como resultado de esta parte, donde los datos se renderizan de manera dinámica en la página basándose en un arreglo de datos.
 3. [Generador de memes](/interactive-web-app) - Página de generación de memes para el aprendizaje de páginas web interactivas. Puedes consultar el [generador de memes](https://serene-faloodeh-a88ca1.netlify.app/) creado como resultado de esta parte, donde es usada la API de [Imgflig](https://imgflip.com/) para obtener las imágenes y el texto se agrega de manera dinámica en la parte superior e inferior de la imagen.
 
-4. [Proyectos de Práctica](/practice-projects) - En esta etapa final del curso, se han desarrollado proyectos que permiten aplicar los conocimientos previamente adquiridos. Uno de estos proyectos es una [WebApp de Notas](https://incredible-syrniki-842a1c.netlify.app/), donde las notas se almacenan en una base de datos creada en [Google Firebase](https://firebase.google.com/?hl=es-419). Además, las notas se ordenan automáticamente en función de la fecha de modificación.
+4. [Proyectos de Práctica](/practice-projects) - En esta etapa final del curso, se han desarrollado proyectos que permiten aplicar los conocimientos previamente adquiridos. 
+- [WebApp de Notas](https://incredible-syrniki-842a1c.netlify.app/): Una aplicación web que permite almacenar y organizar notas en una base de datos de [Google Firebase](https://firebase.google.com/?hl=es-419). Las notas se ordenan automáticamente según la fecha de modificación.
+- [Juego de Tenzies](https://clever-chimera-f1596f.netlify.app/): Un emocionante juego en el que el objetivo es igualar las caras de los 10 dados en el menor tiempo posible. El juego registra el tiempo de juego y el número de movimientos en el almacenamiento local. Si logras un nuevo mejor tiempo, se actualizará automáticamente.
 
 
 ## Recursos
