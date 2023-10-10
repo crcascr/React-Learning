@@ -56,3 +56,15 @@ body * {
   bottom: 0;
   left: 0;
 }
+
+.preguntas{
+  margin: 2rem 8rem;
+}
+
+.pregunta{
+  text-align: justify;
+}
+
+.pregunta--enunciado{
+  margin-bottom: 0.75rem;
+}
