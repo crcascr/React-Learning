@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Karla, sans-serif;
+  color: #293264;
+  background-color: #F5F7FB;
+}
+
+body * {
+  margin: 0;
+}
+
+.intro {
+  margin-top: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro--titulo{
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.intro--descripcion{
+  font-family: Inter, sans-serif;
+  margin-bottom: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.intro--boton{
+  font-family: Inter, sans-serif;
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  width: 14rem;
+  height: 3rem;
+  font-size: 1.45rem;
+  border: transparent;
+  border-radius: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.bubble-container-sd {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bubble-container-ii {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
