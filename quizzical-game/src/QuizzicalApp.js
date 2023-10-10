@@ -54,6 +54,7 @@ function QuizzicalApp() {
             ...todasPreguntas[index].incorrect_answers,
           ],
           respuestaCorrecta: todasPreguntas[index].correct_answer,
+          key:index
         };
       });
       //console.log("Objeto preguntas",preguntasSeleccionadas)
@@ -68,7 +69,7 @@ function QuizzicalApp() {
       {mostrarIntro ? (
         <IntroPage cambiarVisibilidad={cambiarVisibilidad} />
       ) : (
-        <Preguntas preguntas={preguntasSel}/>
+        <Preguntas preguntas={preguntasSel} key={preguntasSel.key}/>
       )}
     </main>
   );

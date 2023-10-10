@@ -6,7 +6,7 @@ body {
   margin: 0;
   font-family: Karla, sans-serif;
   color: #293264;
-  background-color: #F5F7FB;
+  background-color: #f5f7fb;
 }
 
 body * {
@@ -20,22 +20,22 @@ body * {
   align-items: center;
 }
 
-.intro--titulo{
+.intro--titulo {
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
 
-.intro--descripcion{
+.intro--descripcion {
   font-family: Inter, sans-serif;
   margin-bottom: 1.8rem;
   font-weight: 400;
   text-align: center;
 }
 
-.intro--boton{
+.intro--boton {
   font-family: Inter, sans-serif;
-  background-color: #4D5B9E;
-  color: #F5F7FB;
+  background-color: #4d5b9e;
+  color: #f5f7fb;
   width: 14rem;
   height: 3rem;
   font-size: 1.45rem;
@@ -54,17 +54,62 @@ body * {
 .bubble-container-ii {
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0;  
 }
 
-.preguntas{
-  margin: 2rem 8rem;
+.preguntas {
+  padding: 2rem 8rem;
 }
 
-.pregunta{
+.pregunta {
   text-align: justify;
 }
 
-.pregunta--enunciado{
+.pregunta--enunciado {
   margin-bottom: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.pregunta--opciones {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.79px solid #dbdef0;
+  flex-wrap: wrap;
+}
+
+.pregunta--opcion {
+  font-family: Inter, sans-serif;
+  border: 0.79px solid #4d5b9e;
+  padding: 0.25rem 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.pregunta--opcion-seleccionada {
+  background-color: #d6dbf5;
+  border: transparent;
+}
+
+.preguntas--container-boton{
+  padding: 1.25rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+
+.preguntas--boton{
+  font-family: Inter, sans-serif;
+  background-color: #4d5b9e;
+  color: #f5f7fb;
+  height: 2.2rem;
+  font-size: 1rem;
+  border: transparent;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  
 }
