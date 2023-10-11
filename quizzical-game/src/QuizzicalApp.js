@@ -62,7 +62,7 @@ function QuizzicalApp() {
     }
   }, [todasPreguntas]);
 
-  console.log("Preguntas seleccionadas", preguntasSel);
+  //console.log("Preguntas seleccionadas", preguntasSel);
 
   return (
     <main>

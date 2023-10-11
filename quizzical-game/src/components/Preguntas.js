@@ -22,7 +22,17 @@ function Preguntas(props) {
     });
   }
 
-  console.log("RS", respuestasSeleccionadas);
+  //console.log("RS", respuestasSeleccionadas);
+
+  const [respuestaCorrecta, setRespuestaCorrecta] = React.useState(
+    new Array(respuestasSeleccionadas.lenght).fill(null)
+  );
+  const [respuestaIncorrecta, setRespuestaIncorrecta] = React.useState(
+    new Array(respuestasSeleccionadas.lenght).fill(null)
+  );
+
+  const [respuestasComprobadas, setRespuestasComprobadas] =
+    React.useState(false);
 
   const preguntas = props.preguntas;
 
@@ -34,9 +44,40 @@ function Preguntas(props) {
         manejarSeleccion={manejarSeleccion}
         respuestaSeleccionada={respuestasSeleccionadas[index]}
         indexPregunta={index}
+        respuestaCorrecta={respuestaCorrecta[index]}
+        respuestaIncorrecta={respuestaIncorrecta[index]}
+        respuestasComprobadas={respuestasComprobadas}
       />
     );
   });
+
+  function comprobarRespuestas() {
+    const nuevasRespCorrectas = [...respuestaCorrecta];
+    const nuevasRespIncorrectas = [...respuestaIncorrecta];
+
+    if (respuestasSeleccionadas.length < 5) {
+      alert("Debes responder todas las preguntas");
+    } else {
+      respuestasSeleccionadas.forEach((seleccionada, index) => {
+        if (seleccionada === 0) {
+          nuevasRespCorrectas[index] = 0;
+          nuevasRespIncorrectas[index] = false;
+        } else {
+          nuevasRespCorrectas[index] = 0;
+          nuevasRespIncorrectas[index] = true;
+        }
+      });
+
+      setRespuestaCorrecta(nuevasRespCorrectas);
+      setRespuestaIncorrecta(nuevasRespIncorrectas);
+      setRespuestasComprobadas(true);
+
+      console.log("Preguntas:", preguntas);
+      console.log("Respuestas:", respuestasSeleccionadas);
+      console.log("Objeto respuesta correcta:", nuevasRespCorrectas);
+      console.log("Objeto respuesta incorrecta:", nuevasRespIncorrectas);
+    }
+  }
 
   return (
     <div className="preguntas">
@@ -48,9 +89,20 @@ function Preguntas(props) {
         <img src="./images/blob4.svg"></img>
       </div>
       <div className="preguntas--container-boton">
-      <button className="preguntas--boton">Comprobar respuestas</button>
+        <h3 className="preguntas--aciertos">
+          {respuestasComprobadas
+            ? `Tienes ${
+                respuestaIncorrecta.filter((valor) => valor === false).length
+              }/${respuestasSeleccionadas.length} respuestas correctas`
+            : ""}
+        </h3>
+        <button
+          className="preguntas--boton"
+          onClick={() => comprobarRespuestas()}
+        >
+          {respuestasComprobadas ? "Juego nuevo" : "Comprobar respuestas"}
+        </button>
       </div>
-      
     </div>
   );
 }
