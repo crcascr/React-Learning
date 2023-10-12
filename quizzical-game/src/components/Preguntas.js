@@ -2,8 +2,6 @@ import React from "react";
 import Pregunta from "./Pregunta";
 
 function Preguntas(props) {
-  console.log(props)  
-
   const [respuestasSeleccionadas, setRespuestaSeleccionadas] = React.useState(
     new Array(props.preguntas.lenght).fill(null)
   );
@@ -15,8 +13,6 @@ function Preguntas(props) {
       return nuevasRespuestasSeleccionadas;
     });
   }
-
-  //console.log("RS", respuestasSeleccionadas);
 
   const [respuestaCorrecta, setRespuestaCorrecta] = React.useState(
     new Array(respuestasSeleccionadas.lenght).fill(null)
@@ -64,16 +60,16 @@ function Preguntas(props) {
 
       setRespuestaCorrecta(nuevasRespCorrectas);
       setRespuestaIncorrecta(nuevasRespIncorrectas);
-      setRespuestasComprobadas(true);      
+      setRespuestasComprobadas(true);
     }
   }
 
-  function juegoNuevo(){
-    setRespuestasComprobadas(false)
-    setRespuestaSeleccionadas(new Array(props.preguntas.lenght).fill(null))
-    setRespuestaCorrecta(new Array(props.preguntas.lenght).fill(null))
-    setRespuestaIncorrecta(new Array(props.preguntas.lenght).fill(null))
-    props.nuevoJuego()
+  function juegoNuevo() {
+    setRespuestasComprobadas(false);
+    setRespuestaSeleccionadas(new Array(props.preguntas.lenght).fill(null));
+    setRespuestaCorrecta(new Array(props.preguntas.lenght).fill(null));
+    setRespuestaIncorrecta(new Array(props.preguntas.lenght).fill(null));
+    props.nuevoJuego();
   }
 
   return (

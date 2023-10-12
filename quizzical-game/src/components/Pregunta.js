@@ -2,8 +2,6 @@ import React from "react";
 import he from "he";
 
 function Pregunta(props) {
-  console.log(props);
-
   function genNumerosAleatorios() {
     const numerosAleatorios = [];
 
@@ -18,7 +16,9 @@ function Pregunta(props) {
     return numerosAleatorios;
   }
 
-  const[longitudPreguntas,setLongitudPreguntas]=React.useState(props.dato.respuestas.length)
+  const [longitudPreguntas, setLongitudPreguntas] = React.useState(
+    props.dato.respuestas.length
+  );
 
   const [indexGenerado, setIndexGenerado] = React.useState([]);
 
@@ -34,21 +34,15 @@ function Pregunta(props) {
     setRespuestasComprobadas(props.respuestasComprobadas);
   }, [props.respuestasComprobadas]);
 
-  //console.log("Numeros:", indexRespuestas);
-
   const Respuestas = indexGenerado.map((index) => {
-    let respuestaOpcion
-    if(indexGenerado.length>2){
+    let respuestaOpcion;
+    if (indexGenerado.length > 2) {
       respuestaOpcion = he.decode(props.dato.respuestas[index]);
-    }else{
-      respuestaOpcion = (props.dato.respuestas[index]);
+    } else {
+      respuestaOpcion = props.dato.respuestas[index];
     }
-    
-    
+
     const isSelected = props.respuestaSeleccionada === index;
-    console.log("Funcionando")
-    console.log("Index generado",indexGenerado)
-    console.log("Longitud guardada",longitudPreguntas)
 
     const opcionClassName = isSelected
       ? "pregunta--opcion pregunta--opcion-seleccionada"
@@ -65,8 +59,6 @@ function Pregunta(props) {
     const opcionRespuestasComprobadas = respuestasComprobadas
       ? "pregunta--opcion-deshabilitada"
       : "";
-
-    console.log(respuestasComprobadas);
 
     return (
       <a
@@ -88,7 +80,7 @@ function Pregunta(props) {
     return palabra.charAt(0).toUpperCase() + palabra.slice(1);
   }
   return (
-    <div className="pregunta">      
+    <div className="pregunta">
       <h2 className="pregunta--enunciado">{he.decode(props.dato.pregunta)}</h2>
       <div className="pregunta--opciones">{Respuestas}</div>
       <div className="pregunta--indicadores">
