@@ -2,13 +2,7 @@ import React from "react";
 import Pregunta from "./Pregunta";
 
 function Preguntas(props) {
-  //console.log(props)
-
-  const [respuestaSelec, setRespuestaSelec] = React.useState({
-    indexPregunta: null,
-    indexRespuesta: null,
-    seleccionada: false,
-  });
+  console.log(props)  
 
   const [respuestasSeleccionadas, setRespuestaSeleccionadas] = React.useState(
     new Array(props.preguntas.lenght).fill(null)
@@ -70,13 +64,16 @@ function Preguntas(props) {
 
       setRespuestaCorrecta(nuevasRespCorrectas);
       setRespuestaIncorrecta(nuevasRespIncorrectas);
-      setRespuestasComprobadas(true);
-
-      console.log("Preguntas:", preguntas);
-      console.log("Respuestas:", respuestasSeleccionadas);
-      console.log("Objeto respuesta correcta:", nuevasRespCorrectas);
-      console.log("Objeto respuesta incorrecta:", nuevasRespIncorrectas);
+      setRespuestasComprobadas(true);      
     }
+  }
+
+  function juegoNuevo(){
+    setRespuestasComprobadas(false)
+    setRespuestaSeleccionadas(new Array(props.preguntas.lenght).fill(null))
+    setRespuestaCorrecta(new Array(props.preguntas.lenght).fill(null))
+    setRespuestaIncorrecta(new Array(props.preguntas.lenght).fill(null))
+    props.nuevoJuego()
   }
 
   return (
@@ -98,7 +95,11 @@ function Preguntas(props) {
         </h3>
         <button
           className="preguntas--boton"
-          onClick={() => comprobarRespuestas()}
+          onClick={
+            respuestasComprobadas
+              ? () => juegoNuevo()
+              : () => comprobarRespuestas()
+          }
         >
           {respuestasComprobadas ? "Juego nuevo" : "Comprobar respuestas"}
         </button>

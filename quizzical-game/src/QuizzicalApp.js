@@ -9,29 +9,27 @@ function QuizzicalApp() {
     setMostrarIntro(false);
   }
 
-  //Prueba carga datos
   const [todasPreguntas, setTodasPreguntas] = React.useState([]);
   const [preguntasSel, setPreguntasSel] = React.useState([]);
 
-  React.useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch("https://opentdb.com/api.php?amount=10");
-        const data = await response.json();
-        setTodasPreguntas(data.results);
-      } catch (error) {
-        console.error("Error al obtener datos:", error);
-      }
-    }
+  function nuevoJuego(){
+    console.log("Renderizando nuevoJuego")
+    fetch("https://opentdb.com/api.php?amount=10")
+      .then((res)=>res.json())
+      .then((data)=>setTodasPreguntas(data.results))
+  }
 
-    fetchData();
-  }, []);
+  React.useEffect(function(){
+    fetch("https://opentdb.com/api.php?amount=10")
+      .then((res)=>res.json())
+      .then((data)=>setTodasPreguntas(data.results))
+  },[])
 
   function genNumerosAleatorios() {
     const numerosAleatorios = [];
 
     while (numerosAleatorios.length < 5) {
-      const numeroAletorio = Math.floor(Math.random() * 11);
+      const numeroAletorio = Math.floor(Math.random() * 10);
       if (!numerosAleatorios.includes(numeroAletorio)) {
         numerosAleatorios.push(numeroAletorio);
       }
@@ -41,13 +39,13 @@ function QuizzicalApp() {
 
   React.useEffect(() => {
     const indexPreguntas = genNumerosAleatorios();
-    console.log("Todas las preguntas", todasPreguntas);
-    console.log(indexPreguntas);
+
 
     if (todasPreguntas.length !== 0) {
       const preguntasSeleccionadas = indexPreguntas.map((index) => {
         return {
           categoria: todasPreguntas[index].category,
+          dificultad:todasPreguntas[index].difficulty,
           pregunta: todasPreguntas[index].question,
           respuestas: [
             todasPreguntas[index].correct_answer,
@@ -57,19 +55,16 @@ function QuizzicalApp() {
           key:index
         };
       });
-      //console.log("Objeto preguntas",preguntasSeleccionadas)
       setPreguntasSel(preguntasSeleccionadas);
     }
   }, [todasPreguntas]);
-
-  //console.log("Preguntas seleccionadas", preguntasSel);
 
   return (
     <main>
       {mostrarIntro ? (
         <IntroPage cambiarVisibilidad={cambiarVisibilidad} />
       ) : (
-        <Preguntas preguntas={preguntasSel} key={preguntasSel.key}/>
+        <Preguntas preguntas={preguntasSel} key={preguntasSel.key} nuevoJuego={nuevoJuego}/>
       )}
     </main>
   );

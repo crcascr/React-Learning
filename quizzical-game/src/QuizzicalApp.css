@@ -63,6 +63,46 @@ body * {
 
 .pregunta {
   text-align: justify;
+  padding: 0.8rem 0rem;
+  
+  border-bottom: 0.79px solid #dbdef0;
+}
+
+.pregunta--indicadores{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.1rem;
+  margin: 0.7rem 0rem;
+  align-items: center;
+}
+
+.pregunta--categoria{
+  border: 0.79px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+.pregunta--dificultad{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  border: 0.79px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+.pregunta--easy{
+  background-color: #94d7a27e;
+}
+
+.pregunta--medium{
+  background-color: #dacd5f7e;
+}
+
+.pregunta--hard{
+  background-color: #da5f5f7e;
 }
 
 .pregunta--enunciado {
@@ -75,7 +115,6 @@ body * {
   flex-direction: row;
   gap: 0.8rem;
   padding-bottom: 1rem;
-  border-bottom: 0.79px solid #dbdef0;
   flex-wrap: wrap;
 }
 
