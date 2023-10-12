@@ -46,7 +46,7 @@ Aquí se encuentran los proyectos que he desarrollado como parte de mi aprendiza
      - Quizzical está desarrollado en React, una popular biblioteca de JavaScript para crear interfaces de usuario interactivas.
 
    - **Contribuciones y Problemas**:
-     ¡Disfruta jugando Quizzical y demuestra tus conocimientos! Siéntete libre de contribuir o reportar problemas en este repositorio.
+     ¡Disfruta jugando Quizzical y demuestra tus conocimientos! Siéntete libre de contribuir o reportar problemas en este [repositorio](/quizzical-game/).
 
 ## Recursos
 
