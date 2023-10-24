@@ -17,7 +17,9 @@ React es una biblioteca de JavaScript ampliamente utilizada para construir inter
 Aquí se encuentran los proyectos que he desarrollado como parte de mi aprendizaje de React:
 
 1. [Primeros pasos](/Primera%20p%C3%A1gina%20con%20React) - Toma de contacto con React y páginas básicas. Puedes consultar mi [tarjeta de visita digital](https://tourmaline-kitsune-e36550.netlify.app/) creada como resultado de esta parte.
+
 2. [Clon de experiencias Airbnb](/airbnb-experiences-clon) - Clon de la página de experiencias de Airbnb para el aprendizaje de manejo de datos con React. Puedes consultar el [diario de viaje](https://eloquent-bubblegum-6779f1.netlify.app/) creado como resultado de esta parte, donde los datos se renderizan de manera dinámica en la página basándose en un arreglo de datos.
+
 3. [Generador de memes](/interactive-web-app) - Página de generación de memes para el aprendizaje de páginas web interactivas. Puedes consultar el [generador de memes](https://serene-faloodeh-a88ca1.netlify.app/) creado como resultado de esta parte, donde es usada la API de [Imgflig](https://imgflip.com/) para obtener las imágenes y el texto se agrega de manera dinámica en la parte superior e inferior de la imagen.
 
 4. [Proyectos de Práctica](/practice-projects) - En esta etapa final del curso, se han desarrollado proyectos que permiten aplicar los conocimientos previamente adquiridos.
@@ -48,6 +50,28 @@ Aquí se encuentran los proyectos que he desarrollado como parte de mi aprendiza
    - **Contribuciones y Problemas**:
      ¡Disfruta jugando Quizzical y demuestra tus conocimientos! Siéntete libre de contribuir o reportar problemas en este [repositorio](/quizzical-game/).
 
+6. Proyecto extra [Sumz - Resumidor de Artículos en Español](https://extraordinary-sundae-3af29b.netlify.app/): Es una práctica herramienta que te permite obtener resúmenes en español de tus artículos favoritos en línea, con solo unos pocos clics. Utiliza la potente API de [RapidAPI Article Extractor and Summarizer](https://rapidapi.com/es/restyler/api/article-extractor-and-summarizer/) para ofrecer un servicio de resumen de alta calidad.
+
+- **Características Destacadas**:
+
+  Sumz ofrece una serie de características impresionantes:
+
+  - **Resumir en Español:**
+  - No importa la longitud o el tema del artículo, Sumz puede resumirlo en español de manera efectiva.
+  - **Tecnología de Procesamiento de Lenguaje Natural:**
+    -Utiliza algoritmos de procesamiento de lenguaje natural para generar resúmenes precisos y coherentes.
+  - **Almacenamiento Local:**
+    -Guarda los resúmenes generados localmente, lo que te permite acceder a ellos más tarde o compartirlos con otros.
+
+- **Tecnologías Utilizadas**:
+
+  He empleado las siguientes tecnologías para desarrollar Sumz:
+
+  - **Frontend Amigable:**
+    -La interfaz de usuario se ha creado utilizando React y Next.js, lo que proporciona una experiencia suave y agradable.
+  - **Diseño Estilizado:**
+    -Tailwind CSS se ha utilizado para diseñar y dar estilo a la web, creando una apariencia atractiva y moderna.
+
 ## Recursos
 
 Aquí encontrarás una lista de recursos útiles que he utilizado en mi proceso de aprendizaje de React:
@@ -55,6 +79,7 @@ Aquí encontrarás una lista de recursos útiles que he utilizado en mi proceso 
 - [Enlace al curso "Aprenda React"](https://www.coursera.org/learn/learn-react): Enlace al curso que estoy siguiendo.
 - [Documentación de React](https://reactjs.org/docs/getting-started.html): Documentación oficial de React.
 - [MDN Web Docs](https://developer.mozilla.org/es/docs/Web/JavaScript): Una fuente completa de información sobre JavaScript y tecnologías web.
+- [Enlace al curso de JavaScript Mastery](https://www.youtube.com/watch?v=A6g8xc0MoiY): Curso adicional donde se desarrollan tres proyectos desde la base para aprender un mejor manejo de las API en las aplicaciones.
 
 ## Contribuir
 
