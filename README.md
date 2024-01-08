@@ -74,11 +74,16 @@ Aquí se encuentran los proyectos que he desarrollado como parte de mi aprendiza
      - **Diseño Estilizado:**
        Tailwind CSS se ha utilizado para diseñar y dar estilo a la web, creando una apariencia atractiva y moderna.
 
+7. [React Router](/react-router/) - Como parte del proceso de aprendizaje de React esta parte del repositorio esta dedicada a todo lo relacionado con React Router, esta parte forma parte de un segundo curso tomado en [Coursera](https://www.coursera.org/), puedes encontrar el link de esta curso en la sección de recursos.
+
+  -[Week 1](/react-router/week-1/): En esta semana se abarcan los temas basicos de introduccion a React Router como BrowserRoute, Routes y Route
+
 ## Recursos
 
 Aquí encontrarás una lista de recursos útiles que he utilizado en mi proceso de aprendizaje de React:
 
 - [Enlace al curso "Aprenda React"](https://www.coursera.org/learn/learn-react): Enlace al curso que estoy siguiendo.
+- [Enlace al curso "Introduction to React Router"](https://www.coursera.org/learn/learn-react-router-6): Enlace al curso enfocado en React Router.
 - [Documentación de React](https://reactjs.org/docs/getting-started.html): Documentación oficial de React.
 - [MDN Web Docs](https://developer.mozilla.org/es/docs/Web/JavaScript): Una fuente completa de información sobre JavaScript y tecnologías web.
 - [Enlace al curso de JavaScript Mastery](https://www.youtube.com/watch?v=A6g8xc0MoiY): Curso adicional donde se desarrollan tres proyectos desde la base para aprender un mejor manejo de las API en las aplicaciones.
