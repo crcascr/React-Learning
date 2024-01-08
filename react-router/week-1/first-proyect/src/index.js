@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./PageStyle.css"
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
@@ -12,8 +13,10 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+      </nav>
       <Routes>
         <Route path="/" element={<IndexPage />} />
         <Route path="/about" element={<About />} />
