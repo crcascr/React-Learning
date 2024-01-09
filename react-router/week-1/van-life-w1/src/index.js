@@ -11,6 +11,8 @@ import About from "./components/About";
 import Vans from "./components/Vans";
 import Footer from "./components/Footer";
 
+import "./server"
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
