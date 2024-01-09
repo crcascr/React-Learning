@@ -69,7 +69,7 @@ body {
 
 .home--title {
   font-size: 36px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 800;
   margin-top: 65.78px;
   margin-bottom: 22.64px;
@@ -79,31 +79,40 @@ body {
 .home--description {
   font-size: 16px;
   font-weight: 500;
-  color: #FFFFFF;
+  color: #ffffff;
   line-height: 24px;
 }
 
-.button {
+.link--button-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 49.83px;
+  width: 494.33px;
   border-radius: 5px;
-  border: none;
+  background-color: #ff8c38;
+  color: #ffffff;
+  text-decoration: none;
   font-weight: 700;
   font-size: 15.95px;
   line-height: 23.9px;
-}
-
-.button--general {
-  height: 49.83px;
-  width: 494.33px;
-}
-
-.button--home {
   margin-top: 51.66px;
 }
 
-.button--CTA {
+.link--button-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 49px;
   width: 174px;
   border-radius: 10px;
+  background-color: #161616;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15.95px;
+  line-height: 23.9px;
+  margin-left: 37px;
 }
 
 .about {
@@ -132,6 +141,7 @@ body {
   margin: 0px 27px;
   background-color: #ffcc8d;
   border-radius: 5px;
+  padding-bottom: 32px;
 }
 
 .about--CTAText {

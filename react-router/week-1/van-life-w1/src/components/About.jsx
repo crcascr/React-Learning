@@ -1,5 +1,5 @@
 import aboutImage from "../images/aboutImage.png";
-import Button from "./Button";
+import { Link } from "react-router-dom";
 function About() {
   return (
     <div className="about">
@@ -12,22 +12,21 @@ function About() {
           Our mission is to enliven your road trip with the perfect travel van
           rental. Our vans are recertified before each trip to ensure your
           travel plans can go off without a hitch. (Hitch costs extra 😉)
-          <br/>
-          <br/>
+          <br />
+          <br />
           Our team is full of vanlife enthusiasts who know firsthand the magic
           of touring the world on 4 wheels.
         </p>
       </div>
       <div className="about--callToAction">
         <h2 className="about--CTAText">
-          Your destination is waiting.<br/>Your van is ready.
+          Your destination is waiting.
+          <br />
+          Your van is ready.
         </h2>
-        <Button
-          backgroundColor={"#161616"}
-          color={"#FFFFFF"}
-          text={"Explore our vans"}
-          className={"button--CTA button--about"}
-        />
+        <Link className="link--button-about" to="/vans">
+          Explore our vans
+        </Link>
       </div>
     </div>
   );
