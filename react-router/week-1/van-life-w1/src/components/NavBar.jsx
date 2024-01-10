@@ -22,6 +22,15 @@ function NavBar() {
         </Link>
         <div className="navbar--others">
           <Link
+            to="/host"
+            className={`navbar--link navbar--other ${
+              selectedLink === "host" ? "selected" : ""
+            }`}
+            onClick={() => setSelectedLink("host")}
+          >
+            Host
+          </Link>
+          <Link
             to="/about"
             className={`navbar--link navbar--other ${
               selectedLink === "about" ? "selected" : ""
