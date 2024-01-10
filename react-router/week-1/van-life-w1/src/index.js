@@ -5,27 +5,26 @@ import reportWebVitals from "./reportWebVitals";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./vanLife.css";
-import NavBar from "./components/NavBar";
+import Layout from "./components/Layout";
 import Home from "./components/Home";
 import About from "./components/About";
 import Vans from "./components/Vans";
 import VanDetail from "./components/VanDetail";
-import Footer from "./components/Footer";
 
-import "./server"
+import "./server";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/vans" element={<Vans />} />
-        <Route path="/vans/:id" element={<VanDetail />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/vans" element={<Vans />} />
+          <Route path="/vans/:id" element={<VanDetail />} />
+        </Route>
       </Routes>
-      <Footer />
     </BrowserRouter>
   </React.StrictMode>
 );

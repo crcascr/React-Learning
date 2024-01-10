@@ -11,35 +11,37 @@ function NavBar() {
   }, [location.pathname]);
 
   return (
-    <nav className="navbar">
-      <Link
-        to="/"
-        className="navbar--home navbar--link"
-        onClick={() => setSelectedLink(null)}
-      >
-        #VANLIFE
-      </Link>
-      <div className="navbar--others">
+    <header>
+      <nav className="navbar">
         <Link
-          to="/about"
-          className={`navbar--link navbar--other ${
-            selectedLink === "about" ? "selected" : ""
-          }`}
-          onClick={() => setSelectedLink("about")}
+          to="/"
+          className="navbar--home navbar--link"
+          onClick={() => setSelectedLink(null)}
         >
-          About
+          #VANLIFE
         </Link>
-        <Link
-          to="/vans"
-          className={`navbar--link navbar--other ${
-            selectedLink === "vans" ? "selected" : ""
-          }`}
-          onClick={() => setSelectedLink("vans")}
-        >
-          Vans
-        </Link>
-      </div>
-    </nav>
+        <div className="navbar--others">
+          <Link
+            to="/about"
+            className={`navbar--link navbar--other ${
+              selectedLink === "about" ? "selected" : ""
+            }`}
+            onClick={() => setSelectedLink("about")}
+          >
+            About
+          </Link>
+          <Link
+            to="/vans"
+            className={`navbar--link navbar--other ${
+              selectedLink === "vans" ? "selected" : ""
+            }`}
+            onClick={() => setSelectedLink("vans")}
+          >
+            Vans
+          </Link>
+        </div>
+      </nav>
+    </header>
   );
 }
 
