@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Vans() {
   const [vansData, setVansData] = useState([]);
@@ -12,21 +13,23 @@ function Vans() {
   const vansObjects = vansData.map((van) => {
     return (
       <div key={van.id} className="vans--van">
-        <img
-          className="vans-van-image"
-          alt={`Van ${van.name}`}
-          src={van.imageUrl}
-        />
-        <div className="vans--van-details">
-          <p className="vans--van-name">{van.name}</p>
-          <div className="vans--van-priceContainer">
-            <p className="vans--van-price">${van.price}</p>
-            <p className="vans--van-complement">/day</p>
+        <Link to={`/vans/${van.id}`} className="vans--van-link">
+          <img
+            className="vans-van-image"
+            alt={`Van ${van.name}`}
+            src={van.imageUrl}
+          />
+          <div className="vans--van-details">
+            <p className="vans--van-name">{van.name}</p>
+            <div className="vans--van-priceContainer">
+              <p className="vans--van-price">${van.price}</p>
+              <p className="vans--van-complement">/day</p>
+            </div>
           </div>
-        </div>
-        <p className={`vans--van-type ${van.type}`}>
-          {van.type.charAt(0).toUpperCase() + van.type.slice(1)}
-        </p>
+          <p className={`vans--van-type ${van.type}`}>
+            {van.type.charAt(0).toUpperCase() + van.type.slice(1)}
+          </p>
+        </Link>
       </div>
     );
   });

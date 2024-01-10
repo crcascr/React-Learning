@@ -9,6 +9,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Vans from "./components/Vans";
+import VanDetail from "./components/VanDetail";
 import Footer from "./components/Footer";
 
 import "./server"
@@ -22,6 +23,7 @@ root.render(
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/vans" element={<Vans />} />
+        <Route path="/vans/:id" element={<VanDetail />} />
       </Routes>
       <Footer />
     </BrowserRouter>
