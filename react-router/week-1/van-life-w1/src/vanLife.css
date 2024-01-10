@@ -157,3 +157,86 @@ body {
   margin-left: 37px;
   margin-bottom: 32px;
 }
+
+.vans {
+  padding: 0px 26.91px;
+  background-color: #fff7ed;
+}
+
+.vans--title {
+  padding-top: 54.23px;
+  padding-bottom: 22.39px;
+  margin: 0;
+  line-height: 33.7px;
+}
+
+.vans--container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 33.89px;
+  grid-gap: 26.91px;
+  padding-top: 55.69px;
+  padding-bottom: 83.23px;
+}
+
+.vans-van-image {
+  border-radius: 5px;
+  width: 229.23px;
+  height: 229.23px;
+}
+
+.vans--van-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.vans--van-name,
+.vans--van-price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 31.7px;
+  margin-top: 9.97px;
+}
+
+.vans--van-complement {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  text-align: end;
+  font-style: italic;
+}
+
+.vans--van-priceContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.vans--van-price {
+  margin-bottom: 0;
+}
+
+.vans--van-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 33.89px;
+  width: 85.71px;
+  border-radius: 5px;
+  font-style: 16px;
+  font-weight: 600;
+  line-height: 31.7px;
+  color: #ffead0;
+}
+
+.simple {
+  background-color: #e17654;
+}
+
+.rugged {
+  background-color: #115e59;
+}
+
+.luxury {
+  background-color: #161616;
+}
