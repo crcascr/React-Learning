@@ -31,12 +31,17 @@ body {
 
 .navbar--link {
   text-decoration: none;
+  line-height: 22.9px;
+}
+
+.navbar--link:hover {
+  color: #161616;
+  text-decoration: underline;
 }
 
 .selected {
   color: #161616;
   text-decoration: underline;
-  line-height: 22.9px;
 }
 
 .footer {
