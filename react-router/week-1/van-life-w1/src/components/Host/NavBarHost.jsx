@@ -7,7 +7,7 @@ function NavBarHost() {
         className={({ isActive }) =>
           isActive ? "navbarHost--link hostSelected" : "navbarHost--link"
         }
-        to="/host"
+        to="."
         end
       >
         Dashboard
@@ -16,7 +16,7 @@ function NavBarHost() {
         className={({ isActive }) =>
           isActive ? "navbarHost--link hostSelected" : "navbarHost--link"
         }
-        to="/host/income"
+        to="income"
       >
         Income
       </NavLink>
@@ -24,7 +24,7 @@ function NavBarHost() {
         className={({ isActive }) =>
           isActive ? "navbarHost--link hostSelected" : "navbarHost--link"
         }
-        to="/host/vans"
+        to="vans"
       >
         Vans
       </NavLink>
@@ -32,7 +32,7 @@ function NavBarHost() {
         className={({ isActive }) =>
           isActive ? "navbarHost--link hostSelected" : "navbarHost--link"
         }
-        to="/host/reviews"
+        to="reviews"
       >
         Reviews
       </NavLink>
