@@ -331,3 +331,9 @@ body {
   text-decoration: underline;
   font-weight: 700;
 }
+
+.hostSelected {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 700;
+}
