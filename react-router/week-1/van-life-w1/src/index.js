@@ -10,6 +10,8 @@ import Home from "./components/Home";
 import LayoutHost from "./components/Host/LayoutHost";
 import Dashboard from "./components/Host/Dashboard";
 import Income from "./components/Host/Income";
+import HostVans from "./components/Host/HostVans";
+import HostVanDetail from "./components/Host/HostVanDetails";
 import Reviews from "./components/Host/Reviews";
 import About from "./components/About";
 import Vans from "./components/Vans";
@@ -23,7 +25,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />          
+          <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
@@ -31,6 +33,8 @@ root.render(
           <Route path="/host" element={<LayoutHost />}>
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
+            <Route path="vans" element={<HostVans />} />
+            <Route path="vans/:id" element={<HostVanDetail />} />
             <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>

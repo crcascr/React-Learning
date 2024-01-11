@@ -24,6 +24,14 @@ function NavBarHost() {
         className={({ isActive }) =>
           isActive ? "navbarHost--link hostSelected" : "navbarHost--link"
         }
+        to="/host/vans"
+      >
+        Vans
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive ? "navbarHost--link hostSelected" : "navbarHost--link"
+        }
         to="/host/reviews"
       >
         Reviews
