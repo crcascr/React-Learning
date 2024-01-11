@@ -1,4 +1,5 @@
 import { Outlet } from "react-router-dom";
+import "./Host.css";
 
 function Dashboard(){
     return(

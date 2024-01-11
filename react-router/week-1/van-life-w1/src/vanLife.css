@@ -309,31 +309,4 @@ body {
   line-height: 23.9px;
 }
 
-.navbarHost {
-  background-color: #fff7ed;
-  height: 111.62px;
-  display: flex;
-  align-items: center;
-  padding-left: 26px;
-  grid-gap: 29px;
-}
 
-.navbarHost--link {
-  color: #4d4d4d;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 22.9px;
-}
-
-.navbarHost--link:hover {
-  color: #161616;
-  text-decoration: underline;
-  font-weight: 700;
-}
-
-.hostSelected {
-  color: #161616;
-  text-decoration: underline;
-  font-weight: 700;
-}
