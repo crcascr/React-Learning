@@ -70,14 +70,94 @@
   margin-left: 17px;
 }
 
-.hostVans--van-name{
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 31.7px;
+.hostVans--van-name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 31.7px;
+  color: #161616;
+}
+
+.hostVans--van-price {
+  color: #4d4d4d;
+  line-height: 31.7px;
+}
+
+.hostVan {
+  background-color: #fff7ed;
+  padding: 0px 26px;
+  padding-bottom: 45px;
+}
+
+.hostVan--container {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding-left: 25px;
+  padding-bottom: 26px;
+  padding-right: 27.5px;
+}
+
+.hostVan--basicData {
+  display: flex;
+}
+
+.hostVan--image {
+  margin-top: 24px;
+  border-radius: 5px;
+  width: 160.15px;
+  height: 157.9px;
+}
+
+.hostVan--basicData-details {
+  margin-left: 19.97px;
+}
+
+.hostVan--type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 27.59px;
+  width: 69.8px;
+  border-radius: 5px;
+  font-size: 13.03px;
+  font-weight: 600;
+  line-height: 25.8px;
+  color: #ffead0;
+  margin-top: 47px;
+}
+
+.hostVan--name,
+.hostVan--price {
+  margin: 0;
+}
+
+.hostVan--name{
+    margin-top: 16.37px;
+    color: #161616;
+    line-height: 27.4px;
+    font-size: 26.06px;
+}
+
+.hostVan--price{
+    margin-top: 1.4px;
+    color: #161616;
+    line-height: 36px;
+    font-size: 19.54px;
+}
+
+.hostVan--price-complement{
+    font-size: 16.29px;
+    font-weight: 500;
+}
+
+.hostVan--extraData-title{
+    font-weight: 700;
+    font-size: 14.35px;
+    line-height: 21.5px;
+    margin-top: 15px;
     color: #161616;
 }
 
-.hostVans--van-price{
-    color: #4d4d4d;
-    line-height: 31.7px;
+.hostVan--extraData-data{
+    font-weight: 500;
 }
