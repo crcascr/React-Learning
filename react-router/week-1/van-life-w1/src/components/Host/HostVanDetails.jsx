@@ -18,7 +18,7 @@ function HostVanDetail() {
     <h1>Loading...</h1>
   ) : (
     <div className="hostVan">
-      <Link className="link--back-vans" to="/host/vans">
+      <Link className="link--back-vans" to=".." relative="path">
         <img className="link--back-icon" alt="Back" src={backArrow} />
         Back to all vans
       </Link>

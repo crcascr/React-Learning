@@ -28,7 +28,9 @@ function HostVans() {
     );
   });
 
-  return (
+  return hostVansData.length === 0 ? (
+    <h1>Loading...</h1>
+  ) : (
     <div className="hostVans">
       <h1 className="hostVans--title">Your listed vans</h1>
       <>{hostVansObjects}</>
