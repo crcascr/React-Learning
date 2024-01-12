@@ -1,11 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import backArrow from "../images/backArrow.svg";
 
 function VanDetail() {
   const params = useParams();
+  const location = useLocation();
   const [vanData, setVanData] = useState([]);
 
   useEffect(() => {
@@ -14,11 +14,13 @@ function VanDetail() {
       .then((json) => setVanData(json.vans));
   }, [params.id]);
 
+  const search = location.state?.search || "";
+
   return vanData.length === 0 ? (
     <h1>Loading...</h1>
   ) : (
     <div className="van">
-      <Link className="link--back-vans" to="/vans">
+      <Link className="link--back-vans" to={`..${search}`} relative="path">
         <img className="link--back-icon" alt="Back" src={backArrow} />
         Back to all vans
       </Link>
