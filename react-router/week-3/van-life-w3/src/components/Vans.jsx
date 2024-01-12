@@ -40,7 +40,7 @@ function Vans() {
         </Link>
       </div>
     );
-  });
+  });  
 
   return (
     <div className="vans">
@@ -64,12 +64,16 @@ function Vans() {
         >
           Luxury
         </button>
-        <button
-          onClick={() => setSearchParams({})}
-          className="van-type clear-filters"
-        >
-          Clear filters
-        </button>
+        {searchParms.size != 0 ? (
+          <button
+            onClick={() => setSearchParams({})}
+            className="van-type clear-filters"
+          >
+            Clear filters
+          </button>
+        ) : (
+          ""
+        )}
       </div>
       <div className="vans--container">{vansObjects}</div>
     </div>
