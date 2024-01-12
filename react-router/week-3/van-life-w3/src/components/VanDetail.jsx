@@ -16,13 +16,16 @@ function VanDetail() {
 
   const search = location.state?.search || "";
 
+  const searchParams = new URLSearchParams(location.state?.search || "");
+  const type = searchParams.get("type");
+
   return vanData.length === 0 ? (
     <h1>Loading...</h1>
   ) : (
     <div className="van">
       <Link className="link--back-vans" to={`..${search}`} relative="path">
         <img className="link--back-icon" alt="Back" src={backArrow} />
-        Back to all vans
+        {type ? `Back to all ${type} vans` : `Back to all vans`}
       </Link>
       <img
         className="van--image"
