@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link, Outlet } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 
 import backArrow from "../../images/backArrow.svg";
+import NavBarHostVan from "./NavBarHostVan";
+import HostVanInfo from "./HostVanInfo";
 
-function HostVanDetail() {
+function HostVanDetails() {
   const params = useParams();
   const [hostVanData, setHostVanData] = useState([]);
 
@@ -41,32 +42,13 @@ function HostVanDetail() {
             </h2>
           </div>
         </div>
-        <div className="hostVan--extraData">
-          <p className="hostVan--extraData-title">
-            Name:{" "}
-            <span className="hostVan--extraData-data">{hostVanData.name}</span>
-          </p>
-          <p className="hostVan--extraData-title">
-            Category:{" "}
-            <span className="hostVan--extraData-data">
-              {hostVanData.type.charAt(0).toUpperCase() +
-                hostVanData.type.slice(1)}
-            </span>
-          </p>
-          <p className="hostVan--extraData-title">
-            Description:{" "}
-            <span className="hostVan--extraData-data">
-              {hostVanData.description}
-            </span>
-          </p>
-          <p className="hostVan--extraData-title">
-            Visibility:{" "}
-            <span className="hostVan--extraData-data">Public</span>
-          </p>
-        </div>
+        <NavBarHostVan />
+        <>
+          <Outlet context={hostVanData}/>
+        </>        
       </div>
     </div>
   );
 }
 
-export default HostVanDetail;
+export default HostVanDetails;

@@ -16,7 +16,8 @@
   line-height: 22.9px;
 }
 
-.navbarHost--link:hover {
+.navbarHost--link:hover,
+.navbarHostVan--link:hover {
   color: #161616;
   text-decoration: underline;
   font-weight: 700;
@@ -131,33 +132,76 @@
   margin: 0;
 }
 
-.hostVan--name{
-    margin-top: 16.37px;
-    color: #161616;
-    line-height: 27.4px;
-    font-size: 26.06px;
+.hostVan--name {
+  margin-top: 16.37px;
+  color: #161616;
+  line-height: 27.4px;
+  font-size: 26.06px;
 }
 
-.hostVan--price{
-    margin-top: 1.4px;
-    color: #161616;
-    line-height: 36px;
-    font-size: 19.54px;
+.hostVan--price {
+  margin-top: 1.4px;
+  color: #161616;
+  line-height: 36px;
+  font-size: 19.54px;
 }
 
-.hostVan--price-complement{
-    font-size: 16.29px;
-    font-weight: 500;
+.hostVan--price-complement {
+  font-size: 16.29px;
+  font-weight: 500;
 }
 
-.hostVan--extraData-title{
-    font-weight: 700;
-    font-size: 14.35px;
-    line-height: 21.5px;
-    margin-top: 15px;
-    color: #161616;
+.hostVan--extraData-title {
+  font-weight: 700;
+  font-size: 14.35px;
+  line-height: 21.5px;
+  margin-top: 0px;
+  color: #161616;
 }
 
-.hostVan--extraData-data{
-    font-weight: 500;
+.hostVan--extraData-data {
+  font-weight: 500;
+}
+
+.navbarHostVan {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  grid-gap: 21.53px;
+  padding-top: 26.92px;
+  padding-bottom: 27.34px;
+}
+
+.navbarHostVan--link {
+  color: #4d4d4d;
+  text-decoration: none;
+  font-size: 16.15px;
+  font-weight: 500;
+  line-height: 20.6px;
+}
+
+.tabSelected {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.hostVan--pricingData-price {
+  margin-top: 17px;
+  margin-bottom: 21px;
+  line-height: 21.5px;
+  font-weight: 500;
+}
+
+.hostVan--price-complement {
+  color: #4d4d4d;
+  font-size: 16px;
+}
+
+.hostVan--photosData-image {
+  border-radius: 5px;
+  width: 103px;
+  height: 101.56px;
+  margin-top: 1.66px;
+  margin-bottom: 0.79px;
 }

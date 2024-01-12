@@ -11,7 +11,10 @@ import LayoutHost from "./components/Host/LayoutHost";
 import Dashboard from "./components/Host/Dashboard";
 import Income from "./components/Host/Income";
 import HostVans from "./components/Host/HostVans";
-import HostVanDetail from "./components/Host/HostVanDetails";
+import HostVanDetails from "./components/Host/HostVanDetails";
+import HostVanInfo from "./components/Host/HostVanInfo";
+import HostVanPricing from "./components/Host/HostVanPricing";
+import HostVanPhotos from "./components/Host/HostVanPhotos";
 import Reviews from "./components/Host/Reviews";
 import About from "./components/About";
 import Vans from "./components/Vans";
@@ -34,7 +37,11 @@ root.render(
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
             <Route path="vans" element={<HostVans />} />
-            <Route path="vans/:id" element={<HostVanDetail />} />
+            <Route path="vans/:id" element={<HostVanDetails />}>
+              <Route index element={<HostVanInfo />} />
+              <Route path="pricing" element={<HostVanPricing />} />
+              <Route path="photos" element={<HostVanPhotos />} />
+            </Route>
             <Route path="reviews" element={<Reviews />} />
           </Route>
         </Route>
