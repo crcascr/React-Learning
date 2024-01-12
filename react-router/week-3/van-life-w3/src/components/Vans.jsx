@@ -40,7 +40,7 @@ function Vans() {
         </Link>
       </div>
     );
-  });  
+  });
 
   return (
     <div className="vans">
@@ -48,23 +48,29 @@ function Vans() {
       <div className="van-list-filter-buttons">
         <button
           onClick={() => setSearchParams({ type: "simple" })}
-          className="van-type simple"
+          className={`van-type simple ${
+            typeFilter === "simple" ? "simple-selected" : ""
+          }`}
         >
           Simple
         </button>
         <button
           onClick={() => setSearchParams({ type: "rugged" })}
-          className="van-type rugged"
+          className={`van-type rugged ${
+            typeFilter === "rugged" ? "rugged-selected" : ""
+          }`}
         >
           Rugged
         </button>
         <button
           onClick={() => setSearchParams({ type: "luxury" })}
-          className="van-type luxury"
+          className={`van-type luxury ${
+            typeFilter === "luxury" ? "luxury-selected" : ""
+          }`}
         >
           Luxury
         </button>
-        {searchParms.size != 0 ? (
+        {typeFilter ? (
           <button
             onClick={() => setSearchParams({})}
             className="van-type clear-filters"
