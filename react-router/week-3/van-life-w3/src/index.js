@@ -19,6 +19,7 @@ import Reviews from "./components/Host/Reviews";
 import About from "./components/About";
 import Vans from "./components/Vans";
 import VanDetail from "./components/VanDetail";
+import NotFound from "./components/NotFound";
 
 import "./server";
 
@@ -44,6 +45,7 @@ root.render(
             </Route>
             <Route path="reviews" element={<Reviews />} />
           </Route>
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>

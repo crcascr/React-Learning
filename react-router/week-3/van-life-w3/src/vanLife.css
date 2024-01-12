@@ -355,3 +355,32 @@ body {
   background-color: #161616;
   color: #ffead0;
 }
+
+.notFound {
+  background-color: #fff7ed;
+  padding-left: 26px;
+  padding-top: 104.38px;
+  padding-right: 27.67px;
+  padding-bottom: 105.41px;
+}
+
+.notFound--title {
+  margin: 0;
+  color: #161616;
+  line-height: 42px;
+  padding-bottom: 29.59px;
+}
+
+.notFound--button {
+  display: flex;
+  color: #ffffff;
+  background-color: #161616;
+  text-decoration: none;
+  height: 55px;
+  border-radius: 4.98px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 31.7px;
+}
