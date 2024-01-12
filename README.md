@@ -77,6 +77,8 @@ Aquí se encuentran los proyectos que he desarrollado como parte de mi aprendiza
 7. [React Router](/react-router/) - Como parte del proceso de aprendizaje de React, esta parte del repositorio está dedicada a todo lo relacionado con React Router. Esta parte forma parte de un segundo curso tomado en [Coursera](https://www.coursera.org/), y puedes encontrar el enlace de este curso en la sección de recursos.
 
    - [Week 1](/react-router/week-1/): En esta semana se abarcan los temas básicos de introducción a React Router, como BrowserRouter, Routes y Route.
+   - [Week 2](/react-router/week-2/): En esta semana se abarcan los temas relacionados con Nested Routes.
+   - [Week 3](/react-router/week-3/): En esta semana se abarcan los temas relacionados con Search Params and Links.
 
 
 ## Recursos
