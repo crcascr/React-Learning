@@ -309,4 +309,43 @@ body {
   line-height: 23.9px;
 }
 
+.van-list-filter-buttons {
+  display: flex;
+}
 
+.van-type {
+  width: 104px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  border-radius: 5px;
+  color: #4d4d4d;
+  text-decoration: none;
+  background-color: #ffead0;
+  line-height: 23.9px;
+  transition: all 0.25s ease-in;
+}
+
+.clear-filters {
+  margin-right: 0px;
+  margin-left: 40px;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.simple:hover {
+  background-color: #e17654;
+  color: #ffead0;
+}
+
+.rugged:hover {
+  background-color: #115e59;
+  color: #ffead0;
+}
+
+.luxury:hover {
+  background-color: #161616;
+  color: #ffead0;
+}
