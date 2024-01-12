@@ -6,9 +6,7 @@ function Vans() {
 
   const [searchParms, setSearchParams] = useSearchParams();
 
-  const typeFilter=searchParms.get("type");
-
-  console.log(typeFilter)
+  const typeFilter = searchParms.get("type");  
 
   useEffect(() => {
     fetch("/api/vans")
@@ -16,7 +14,11 @@ function Vans() {
       .then((json) => setVansData(json.vans));
   }, []);
 
-  const vansObjects = vansData.map((van) => {
+  const vansDataFiltered = typeFilter
+    ? vansData.filter((van) => van.type === typeFilter)
+    : vansData;
+
+  const vansObjects = vansDataFiltered.map((van) => {
     return (
       <div key={van.id} className="vans--van">
         <Link to={`/vans/${van.id}`} className="vans--van-link">
