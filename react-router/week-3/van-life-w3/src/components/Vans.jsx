@@ -21,7 +21,7 @@ function Vans() {
   const vansObjects = vansDataFiltered.map((van) => {
     return (
       <div key={van.id} className="vans--van">
-        <Link to={`/vans/${van.id}`} className="vans--van-link">
+        <Link to={van.id} className="vans--van-link">
           <img
             className="vans-van-image"
             alt={`Van ${van.name}`}
