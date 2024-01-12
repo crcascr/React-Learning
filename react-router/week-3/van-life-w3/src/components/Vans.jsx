@@ -46,18 +46,30 @@ function Vans() {
     <div className="vans">
       <h1 className="vans--title">Explore our van options</h1>
       <div className="van-list-filter-buttons">
-        <Link to="?type=simple" className="van-type simple">
+        <button
+          onClick={() => setSearchParams({ type: "simple" })}
+          className="van-type simple"
+        >
           Simple
-        </Link>
-        <Link to="?type=rugged" className="van-type rugged">
+        </button>
+        <button
+          onClick={() => setSearchParams({ type: "rugged" })}
+          className="van-type rugged"
+        >
           Rugged
-        </Link>
-        <Link to="?type=luxury" className="van-type luxury">
+        </button>
+        <button
+          onClick={() => setSearchParams({ type: "luxury" })}
+          className="van-type luxury"
+        >
           Luxury
-        </Link>
-        <Link to="." className="van-type clear-filters">
+        </button>
+        <button
+          onClick={() => setSearchParams({})}
+          className="van-type clear-filters"
+        >
           Clear filters
-        </Link>
+        </button>
       </div>
       <div className="vans--container">{vansObjects}</div>
     </div>
