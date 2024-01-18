@@ -9,18 +9,26 @@ function Vans() {
 
   const [loading, setLoading] = useState(false);
 
+  const [error, setError] = useState(null);
+
   const typeFilter = searchParms.get("type");
 
   useEffect(() => {
     async function loadVans() {
       setLoading(true);
-      const data = await getVans();
-      setVansData(data);
-      setLoading(false);
+      try {
+        const data = await getVans();
+        setVansData(data);
+      } catch (err) {        
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
     }
     loadVans();
   }, []);
 
+  
   const vansDataFiltered = typeFilter
     ? vansData.filter((van) => van.type === typeFilter)
     : vansData;
@@ -51,11 +59,17 @@ function Vans() {
         </Link>
       </div>
     );
-  });  
+  });
 
-  return loading ? (
-    <h1>Loading ....</h1>
-  ) : (
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>There was an error: {error.message}</h1>;
+  }
+
+  return (
     <div className="vans">
       <h1 className="vans--title">Explore our van options</h1>
       <div className="van-list-filter-buttons">
