@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import userCircle from "../images/userCircle.svg";
+import userCircleUnselected from "../images/userCircleUnselected.svg";
 
 function NavBar() {
   return (
@@ -41,13 +42,17 @@ function NavBar() {
           </NavLink>
           <NavLink
             to="/login"
-            className={({ isActive }) =>
-              isActive
-                ? "navbar--link navbar--other navbar--login selected"
-                : "navbar--link navbar--other navbar--login"
-            }
+            className="navbar--link navbar--other navbar--login"
           >
-            <img src={userCircle} className="navbar--login-icon" />
+            {({ isActive }) => (
+              <>
+                <img
+                  src={isActive ? userCircle : userCircleUnselected}
+                  alt="Login"
+                  className="navbar--login-icon"
+                />
+              </>
+            )}
           </NavLink>
         </div>
       </nav>
