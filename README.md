@@ -1,6 +1,6 @@
 # Aprendizaje de React
 
-Este repositorio contiene mi proceso de aprendizaje de React, que se basa en el curso "Aprenda React". Aquí documentaré mi progreso, proyectos y notas clave relacionadas con React.
+Este repositorio contiene mi proceso de aprendizaje de React, que se basa en los cursos [Aprenda React](https://www.coursera.org/learn/learn-react) e [Introduction to React Router](https://www.coursera.org/learn/learn-react-router-6) impartidos por [Bob Ziroll](https://twitter.com/bobziroll). Aquí documentaré mi progreso, proyectos y notas clave relacionadas con React y React Router.
 
 ## Descripción General
 
