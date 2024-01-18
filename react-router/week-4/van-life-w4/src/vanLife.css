@@ -356,7 +356,8 @@ body {
   color: #ffead0;
 }
 
-.notFound {
+.notFound,
+.error {
   background-color: #fff7ed;
   padding-left: 26px;
   padding-top: 104.38px;
@@ -364,7 +365,8 @@ body {
   padding-bottom: 105.41px;
 }
 
-.notFound--title {
+.notFound--title,
+.error--title {
   margin: 0;
   color: #161616;
   line-height: 42px;
@@ -383,4 +385,8 @@ body {
   font-size: 18px;
   font-weight: 700;
   line-height: 31.7px;
+}
+
+.error--description {
+  color: red;
 }

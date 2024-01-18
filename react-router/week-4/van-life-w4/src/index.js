@@ -25,6 +25,7 @@ import About from "./components/About";
 import Vans, { loader as vansLoader } from "./components/Vans";
 import VanDetail from "./components/VanDetail";
 import NotFound from "./components/NotFound";
+import Error from "./components/Error";
 
 import "./server";
 
@@ -33,7 +34,12 @@ const routes = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="vans" element={<Vans />} loader={vansLoader} />
+      <Route
+        path="vans"
+        element={<Vans />}
+        loader={vansLoader}
+        errorElement={<Error />}
+      />
       <Route path="vans/:id" element={<VanDetail />} />
 
       <Route path="/host" element={<LayoutHost />}>
