@@ -7,12 +7,16 @@ function Vans() {
 
   const [searchParms, setSearchParams] = useSearchParams();
 
+  const [loading, setLoading] = useState(false);
+
   const typeFilter = searchParms.get("type");
 
   useEffect(() => {
     async function loadVans() {
+      setLoading(true);
       const data = await getVans();
       setVansData(data);
+      setLoading(false);
     }
     loadVans();
   }, []);
@@ -47,9 +51,11 @@ function Vans() {
         </Link>
       </div>
     );
-  });
+  });  
 
-  return (
+  return loading ? (
+    <h1>Loading ....</h1>
+  ) : (
     <div className="vans">
       <h1 className="vans--title">Explore our van options</h1>
       <div className="van-list-filter-buttons">
