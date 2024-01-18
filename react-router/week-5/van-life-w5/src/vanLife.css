@@ -34,15 +34,6 @@ body {
   line-height: 22.9px;
 }
 
-.navbar--login{
-  display: flex;
-}
-
-.navbar--login-icon{
-  width: 24px;
-  height: 24px;
-}
-
 .navbar--link:hover {
   color: #161616;
   text-decoration: underline;
