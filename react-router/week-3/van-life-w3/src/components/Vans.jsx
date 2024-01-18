@@ -19,7 +19,7 @@ function Vans() {
       try {
         const data = await getVans();
         setVansData(data);
-      } catch (err) {        
+      } catch (err) {
         setError(err);
       } finally {
         setLoading(false);
@@ -28,7 +28,6 @@ function Vans() {
     loadVans();
   }, []);
 
-  
   const vansDataFiltered = typeFilter
     ? vansData.filter((van) => van.type === typeFilter)
     : vansData;
