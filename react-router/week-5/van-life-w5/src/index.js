@@ -8,6 +8,7 @@ import {
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
+  redirect,
 } from "react-router-dom";
 import "./vanLife.css";
 import Layout from "./components/Layout";
@@ -45,15 +46,63 @@ const routes = createBrowserRouter(
       <Route path="vans/:id" element={<VanDetail />} />
 
       <Route path="/host" element={<LayoutHost />}>
-        <Route index element={<Dashboard />} />
-        <Route path="income" element={<Income />} />
-        <Route path="vans" element={<HostVans />} />
-        <Route path="vans/:id" element={<HostVanDetails />}>
-          <Route index element={<HostVanInfo />} />
-          <Route path="pricing" element={<HostVanPricing />} />
-          <Route path="photos" element={<HostVanPhotos />} />
+        <Route
+          index
+          element={<Dashboard />}
+          loader={async () => {
+            return null;
+          }}
+        />
+        <Route
+          path="income"
+          element={<Income />}
+          loader={async () => {
+            return null;
+          }}
+        />
+        <Route
+          path="vans"
+          element={<HostVans />}
+          loader={async () => {
+            return null;
+          }}
+        />
+        <Route
+          path="vans/:id"
+          element={<HostVanDetails />}
+          loader={async () => {
+            return null;
+          }}
+        >
+          <Route
+            index
+            element={<HostVanInfo />}
+            loader={async () => {
+              return null;
+            }}
+          />
+          <Route
+            path="pricing"
+            element={<HostVanPricing />}
+            loader={async () => {
+              return null;
+            }}
+          />
+          <Route
+            path="photos"
+            element={<HostVanPhotos />}
+            loader={async () => {
+              return null;
+            }}
+          />
         </Route>
-        <Route path="reviews" element={<Reviews />} />
+        <Route
+          path="reviews"
+          element={<Reviews />}
+          loader={async () => {
+            return null;
+          }}
+        />
       </Route>
       <Route path="*" element={<NotFound />} />
     </Route>
