@@ -35,15 +35,15 @@
 
 .login--input-email::placeholder,
 .login--input-password::placeholder {
-  color: #4D4D4D;
-}
-
-.login--button{
-    margin-top: 22px;
-    margin-bottom: 47px;
+  color: #4d4d4d;
 }
 
 .login--button {
-    border: none;
-    cursor: pointer;
+  margin-top: 22px;
+  margin-bottom: 47px;
+}
+
+.login--button {
+  border: none;
+  cursor: pointer;
 }

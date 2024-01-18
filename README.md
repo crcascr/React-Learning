@@ -80,6 +80,7 @@ Aquí se encuentran los proyectos que he desarrollado como parte de mi aprendiza
    - [Week 2](/react-router/week-2/): En esta semana se abarcan los temas relacionados con Nested Routes.
    - [Week 3](/react-router/week-3/): En esta semana se abarcan los temas relacionados con Search Params and Links.
    - [Week 4](/react-router/week-4/): En esta semana se abarcan los temas relacionados con Loaders and Errors.
+   - [Week 5](/react-router/week-5/): En esta semana se abarcan los temas relacionados con Actions and Protected Routes.
 
 
 ## Recursos
