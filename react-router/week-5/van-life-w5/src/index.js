@@ -16,8 +16,10 @@ import Home from "./components/Home";
 import LayoutHost from "./components/Host/LayoutHost";
 import Dashboard from "./components/Host/Dashboard";
 import Income from "./components/Host/Income";
-import HostVans from "./components/Host/HostVans";
-import HostVanDetails from "./components/Host/HostVanDetails";
+import HostVans, { loader as hostVansLoader } from "./components/Host/HostVans";
+import HostVanDetails, {
+  loader as hostVanDetailsLoader,
+} from "./components/Host/HostVanDetails";
 import HostVanInfo from "./components/Host/HostVanInfo";
 import HostVanPricing from "./components/Host/HostVanPricing";
 import HostVanPhotos from "./components/Host/HostVanPhotos";
@@ -25,7 +27,7 @@ import Reviews from "./components/Host/Reviews";
 import About from "./components/About";
 import Vans, { loader as vansLoader } from "./components/Vans";
 import Login from "./pages/Login";
-import VanDetail from "./components/VanDetail";
+import VanDetail, { loader as vanDetailLoader } from "./components/VanDetail";
 import NotFound from "./components/NotFound";
 import Error from "./components/Error";
 
@@ -43,7 +45,7 @@ const routes = createBrowserRouter(
         loader={vansLoader}
         errorElement={<Error />}
       />
-      <Route path="vans/:id" element={<VanDetail />} />
+      <Route path="vans/:id" element={<VanDetail />} loader={vanDetailLoader} />
 
       <Route path="/host" element={<LayoutHost />}>
         <Route
@@ -60,19 +62,11 @@ const routes = createBrowserRouter(
             return null;
           }}
         />
-        <Route
-          path="vans"
-          element={<HostVans />}
-          loader={async () => {
-            return null;
-          }}
-        />
+        <Route path="vans" element={<HostVans />} loader={hostVansLoader} />
         <Route
           path="vans/:id"
           element={<HostVanDetails />}
-          loader={async () => {
-            return null;
-          }}
+          loader={hostVanDetailsLoader}
         >
           <Route
             index

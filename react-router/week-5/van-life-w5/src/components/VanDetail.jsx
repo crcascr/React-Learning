@@ -1,18 +1,18 @@
-import { useParams, Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link, useLocation, useLoaderData } from "react-router-dom";
 
 import backArrow from "../images/backArrow.svg";
+import { getVans } from "../api";
+
+export function loader({ params }) {
+  return getVans(params.id);
+}
 
 function VanDetail() {
-  const params = useParams();
-  const location = useLocation();
-  const [vanData, setVanData] = useState([]);
+  const loadedData = useLoaderData();
 
-  useEffect(() => {
-    fetch(`/api/vans/${params.id}`)
-      .then((response) => response.json())
-      .then((json) => setVanData(json.vans));
-  }, [params.id]);
+  const vanData = loadedData;
+
+  const location = useLocation();
 
   const search = location.state?.search || "";
 

@@ -1,18 +1,17 @@
-import { useParams, Link, Outlet } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link, Outlet, useLoaderData } from "react-router-dom";
 
 import backArrow from "../../images/backArrow.svg";
 import NavBarHostVan from "./NavBarHostVan";
+import { getHostVans } from "../../api";
+
+export function loader({ params }) {
+  return getHostVans(params.id);
+}
 
 function HostVanDetails() {
-  const params = useParams();
-  const [hostVanData, setHostVanData] = useState([]);
-  
-  useEffect(() => {
-    fetch(`/api/host/vans/${params.id}`)
-      .then((response) => response.json())
-      .then((json) => setHostVanData(json.vans[0]));
-  }, [params.id]);
+  const loadedData = useLoaderData();
+
+  const hostVanData = loadedData[0];
 
   return hostVanData.length === 0 ? (
     <h1>Loading...</h1>
@@ -43,8 +42,8 @@ function HostVanDetails() {
         </div>
         <NavBarHostVan />
         <>
-          <Outlet context={hostVanData}/>
-        </>        
+          <Outlet context={hostVanData} />
+        </>
       </div>
     </div>
   );
