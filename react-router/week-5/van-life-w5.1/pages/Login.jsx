@@ -15,13 +15,16 @@ export default function Login() {
   const [status, setStatus] = React.useState("idle");
   const [error, setError] = React.useState(null);
 
+  const message = useLoaderData();
+  const navigate = useNavigate();
+
   function handleSubmit(e) {
     e.preventDefault();
     setStatus("submitting");
     setError(null);
     loginUser(loginFormData)
       .then((data) => {
-        console.log(data);
+        navigate("/host", { replace: true });
       })
       .catch((err) => {
         setError(err);
@@ -38,8 +41,6 @@ export default function Login() {
       [name]: value,
     }));
   }
-
-  const message = useLoaderData();
 
   return (
     <div className="login-container">
