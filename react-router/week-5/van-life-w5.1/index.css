@@ -494,11 +494,6 @@ i[class*="van-type-"] {
   padding-inline: 27px;
 }
 
-.login--message{
-  color: red;
-  margin: 0;
-}
-
 .login-form {
   display: flex;
   flex-direction: column;
@@ -536,4 +531,15 @@ i[class*="van-type-"] {
   margin-top: 22px;
   color: white;
   font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+.login--message {
+  color: red;
+  margin: 0;
+}
+
+.login--error-message {
+  color: red;
+  margin-top: 0;
 }

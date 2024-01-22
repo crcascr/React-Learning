@@ -12,11 +12,23 @@ export default function Login() {
     password: "",
   });
 
+  const [status, setStatus] = React.useState("idle");
+  const [error, setError] = React.useState(null);
+
   function handleSubmit(e) {
     e.preventDefault();
-    loginUser(loginFormData).then((data) => {
-      console.log(data);
-    });
+    setStatus("submitting");
+    setError(null);
+    loginUser(loginFormData)
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        setError(err);
+      })
+      .finally(() => {
+        setStatus("idle");
+      });
   }
 
   function handleChange(e) {
@@ -33,6 +45,7 @@ export default function Login() {
     <div className="login-container">
       {message && <h3 className="login--message">{message}!</h3>}
       <h1>Sign in to your account</h1>
+      {error && <h3 className="login--error-message">{error.message}</h3>}
       <form onSubmit={handleSubmit} className="login-form">
         <input
           name="email"
@@ -48,7 +61,9 @@ export default function Login() {
           placeholder="Password"
           value={loginFormData.password}
         />
-        <button>Log in</button>
+        <button disabled={status === "submitting"}>
+          {status != "submitting" ? "Log in" : "Logging in..."}
+        </button>
       </form>
     </div>
   );
