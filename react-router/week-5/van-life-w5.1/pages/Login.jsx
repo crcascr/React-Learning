@@ -48,7 +48,7 @@ export default function Login() {
       {message && <h3 className="login--message">{message}!</h3>}
       <h1>Sign in to your account</h1>
       {error && <h3 className="login--error-message">{error.message}</h3>}
-      <Form method="post" className="login-form">
+      <Form method="post" className="login-form" replace>
         <input name="email" type="email" placeholder="Email address" />
         <input name="password" type="password" placeholder="Password" />
         <button disabled={status === "submitting"}>
