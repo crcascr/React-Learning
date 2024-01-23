@@ -1,14 +1,18 @@
 import React from "react";
-import { useLoaderData, useNavigate, Form } from "react-router-dom";
+import { useLoaderData, useNavigate, Form, redirect } from "react-router-dom";
 import { loginUser } from "../api";
 
 export function loader({ request }) {
   return new URL(request.url).searchParams.get("message");
 }
 
-export async function action(obj) {
-  console.log(obj);
-  return null;
+export async function action({ request }) {
+  const formData = await request.formData();
+  const email = formData.get("email");
+  const password = formData.get("password");
+  const loginData = await loginUser({ email, password });
+  localStorage.setItem("loggedin", true);
+  return redirect("/host");
 }
 
 export default function Login() {
@@ -37,14 +41,6 @@ export default function Login() {
       .finally(() => {
         setStatus("idle");
       });
-  }
-
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setLoginFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
   }
 
   return (
