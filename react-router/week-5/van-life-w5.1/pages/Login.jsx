@@ -1,9 +1,14 @@
 import React from "react";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, Form } from "react-router-dom";
 import { loginUser } from "../api";
 
 export function loader({ request }) {
   return new URL(request.url).searchParams.get("message");
+}
+
+export async function action(obj) {
+  console.log(obj);
+  return null;
 }
 
 export default function Login() {
@@ -47,25 +52,13 @@ export default function Login() {
       {message && <h3 className="login--message">{message}!</h3>}
       <h1>Sign in to your account</h1>
       {error && <h3 className="login--error-message">{error.message}</h3>}
-      <form onSubmit={handleSubmit} className="login-form">
-        <input
-          name="email"
-          onChange={handleChange}
-          type="email"
-          placeholder="Email address"
-          value={loginFormData.email}
-        />
-        <input
-          name="password"
-          onChange={handleChange}
-          type="password"
-          placeholder="Password"
-          value={loginFormData.password}
-        />
+      <Form method="post" className="login-form">
+        <input name="email" type="email" placeholder="Email address" />
+        <input name="password" type="password" placeholder="Password" />
         <button disabled={status === "submitting"}>
           {status != "submitting" ? "Log in" : "Logging in..."}
         </button>
-      </form>
+      </Form>
     </div>
   );
 }
