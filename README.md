@@ -76,12 +76,12 @@ Aquí se encuentran los proyectos que he desarrollado como parte de mi aprendiza
 
 7. [React Router](/react-router/) - Como parte del proceso de aprendizaje de React, esta parte del repositorio está dedicada a todo lo relacionado con React Router. Esta parte forma parte de un segundo curso tomado en [Coursera](https://www.coursera.org/), y puedes encontrar el enlace de este curso en la sección de recursos.
 
-   - [Week 1](/react-router/week-1/): En esta semana se abarcan los temas básicos de introducción a React Router, como BrowserRouter, Routes y Route.
-   - [Week 2](/react-router/week-2/): En esta semana se abarcan los temas relacionados con Nested Routes.
-   - [Week 3](/react-router/week-3/): En esta semana se abarcan los temas relacionados con Search Params and Links.
-   - [Week 4](/react-router/week-4/): En esta semana se abarcan los temas relacionados con Loaders and Errors.
-   - [Week 5](/react-router/week-5/): En esta semana se abarcan los temas relacionados con Actions and Protected Routes.
-
+   - [Week 1](/react-router/week-1/): En este módulo se abarcan los temas básicos de introducción a React Router, como BrowserRouter, Routes y Route.
+   - [Week 2](/react-router/week-2/): Este módulo explora las rutas anidadas en React Router 6, que se utilizan para crear estructuras de rutas complejas y jerárquicas dentro de las aplicaciones React.
+   - [Week 3](/react-router/week-3/): Este módulo se sumerge en el uso de parámetros de búsqueda y enlaces en React Router 6, permitiendo a los desarrolladores implementar la navegación con parámetros de consulta en sus aplicaciones React.
+   - [Week 4](/react-router/week-4/): Este módulo explora en cargadores y errores en React Router 6, que se utilizan para manejar los estados de carga y manejo de errores dentro de los componentes de enrutamiento de sus aplicaciones.
+   - [Week 5](/react-router/week-5/): Este módulo explora acciones y rutas protegidas en React Router 6, implementa autenticación y autorización protegiendo rutas y realizando acciones basadas en roles o permisos de usuario.
+   - [Week 6](/react-router/week-6): Este módulo profundiza en los datos diferidos en React Router 6, que permite a los desarrolladores cargar y mostrar datos bajo demanda de forma eficiente para rutas específicas, mejorando el rendimiento y la experiencia del usuario.
 
 ## Recursos
 
